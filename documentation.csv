@@ -93,6 +93,8 @@ with a scope greater than only the [ITM13] feature.
 The chosen scope is 'ITM8-gains-collection'
 with one 'form' element per player,
 and we'll see how it goes.
+
+And actually you can use the HTML 'output' element for this!
 "|""
 ITM10|Methodology|"
 Specific design choices and principles are outlined here in 'Methodology'.

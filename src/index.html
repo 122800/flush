@@ -50,28 +50,48 @@
         </tr>
         <tr>
             <td>Emelie</td><!-- ITM6 -->
-            <td><input form="ITM8-gains-collection-p1" type="number" min="0" max="999"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p1" type="number" min="0" max="999"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p1" type="number" min="0" max="999"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p1" type="number" min="0" max="999"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p1" type="number" min="0" max="999"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p1" type="number" min="0" max="999"></td><!-- ITM8 -->
-            <td><!-- ITM14 -->
-                <form id="ITM8-gains-collection-p1"></form>
+            <td><input form="ITM8-gains-collection-p1" type="number" min="0" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+            <td><input form="ITM8-gains-collection-p1" type="number" min="0" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+            <td><input form="ITM8-gains-collection-p1" type="number" min="0" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+            <td><input form="ITM8-gains-collection-p1" type="number" min="0" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+            <td><input form="ITM8-gains-collection-p1" type="number" min="0" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+            <td><input form="ITM8-gains-collection-p1" type="number" min="0" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+            <td>
+                <form id="ITM8-gains-collection-p1">
+                    <output name="ITM13">0</output>
+                </form>
             </td>
         </tr>
         <tr>
             <td>Leovi</td><!-- ITM6 -->
-            <td><input form="ITM8-gains-collection-p2" type="number" min="0" max="999"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p2" type="number" min="0" max="999"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p2" type="number" min="0" max="999"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p2" type="number" min="0" max="999"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p2" type="number" min="0" max="999"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p2" type="number" min="0" max="999"></td><!-- ITM8 -->
-            <td><!-- ITM14 -->
-                <form id="ITM8-gains-collection-p2"></form>
+            <td><input form="ITM8-gains-collection-p2" type="number" min="0" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+            <td><input form="ITM8-gains-collection-p2" type="number" min="0" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+            <td><input form="ITM8-gains-collection-p2" type="number" min="0" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+            <td><input form="ITM8-gains-collection-p2" type="number" min="0" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+            <td><input form="ITM8-gains-collection-p2" type="number" min="0" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+            <td><input form="ITM8-gains-collection-p2" type="number" min="0" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+            <td>
+                <form id="ITM8-gains-collection-p2">
+                    <output name="ITM13">0</output>
+                </form>
             </td>
         </tr>
     </table>
+
+    <script type="text/javascript">
+        "use strict";
+
+        const Flush = {
+            calcFormScore(form) {/*ITM13*/
+                let sum = 0;
+                Array.from(form.elements).forEach(e => {
+                    if(e.type != "number") return;
+                    if(e.value.length < 1) return;
+                    sum += parseInt(e.value, 10);
+                });
+                form.ITM13.value = sum;
+            }
+        };
+    </script>
 </body>
 </html>
