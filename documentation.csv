@@ -8,6 +8,7 @@ Flush (score-tracking tool)
 - [ITM12]: To-do list
 "|""
 ITM2|Feature List|"
+* [ITM17] The game's rounds are labeled
 * [ITM3] View all game data elements
 * [ITM13] Player score is calculated automatically & displayed
 * [ITM4] Add a player to the game
@@ -110,4 +111,12 @@ An item encompasses or is encompassed.
 An item relies/depends on the scope defined by another.
 Updates to the encompassed item must be reflected
 in the encompassing one.
+"|""
+ITM17|Feature: Rounds Labeled|"
+The 5 standard rounds are labeled as follows:
+- `To tress`
+- `En tress en serie`
+- `To serier`
+- `Tre tress`
+- `To tress en serie`
 "|""
