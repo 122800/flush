@@ -71,6 +71,16 @@ Additionally,
 of the full-blown CRUD-pub/sub framework.
 Appropriate shortcuts will instead be taken
 to avoid this complexity.
+
+# Implementing ITM13 (Score Calculation)
+
+An HTML 'form' element is used
+because it allows centralized event-handling
+of all child elements.
+
+To avoid submitting arbitrary tags to the scope of the 'form' tag,
+the 'form' element will be defined separately
+and referenced by detached 'input' elements.
 "|""
 ITM10|Methodology|"
 Specific design choices and principles are outlined here in 'Methodology'.
