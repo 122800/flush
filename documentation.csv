@@ -101,3 +101,9 @@ The sum of all of a player's gains (ITM8).
 ITM15|Concept(Technical): Dynamic Refresh|"
 Code logic triggered by an event.
 "|""
+ITM16|Link: Encompass|"
+An item encompasses or is encompassed.
+An item relies/depends on the scope defined by another.
+Updates to the encompassed item must be reflected
+in the encompassing one.
+"|""
