@@ -6,10 +6,48 @@
     <title>Mellbye Flush</title><!-- [ITM11] -->
 
     <style>
-        body {background-color: powderblue;}
-    </style>
+        body {
+            background-color: #A1D0EB;
+        }
+
+        #game {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #game td, #game th {
+            border: 2px solid #023654;
+            padding: 8px;
+        }
+
+        #game tr:nth-child(even){background-color: #F2F2F2;}
+        #game tr:nth-child(odd){background-color: #FFFFFF;}
+        #game tr:hover {background-color: #DDD;}
+
+        #game th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #046DAA;
+            color: #FFF;
+        }
+  </style>
 </head>
 <body>
-
+    <table id="game">
+        <tr>
+            <th>Spiller</th>
+            <th>1: To tress</th>
+        </tr>
+        <tr>
+            <td>Emelie</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Leovi</td>
+            <td>0</td>
+        </tr>
+    </table>
 </body>
 </html>
