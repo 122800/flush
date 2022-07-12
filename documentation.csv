@@ -8,6 +8,7 @@ ITM2|Feature List|"
 * [ITM3] View all info pertaining to the game
 * [ITM4] Add a player to the game
 * [ITM5] Remove a player from the game
+* [ITM7] Inscribe a player's gains in a given round
 Tentative features:
 * Sum of scores can be viewed up to an arbitrary round
 * Export to text format
@@ -16,8 +17,8 @@ Tentative features:
 ITM3|Feature: View all info|"
 Information displayed:
 * Player names (ITM6)
-* Player score gained in each round
-* Sum of scores for each player
+* Player gains (ITM8) for each round
+* Sum of gains (ITM8) for each player
 "
 ITM4|Feature: Add player|"
 Details:
@@ -25,9 +26,17 @@ Details:
 * Player name can be chosen (ITM6)
 "
 ITM5|Feature: Remove player|"
-
+Details:
+* A means of deleting a player is visible
 "
 ITM6|Concept: Player Name|"
 The (nick)name of a player.
 Textual.
+"
+ITM7|Feature: Inscribe score|"
+A player's gains (ITM8) can be inscribed for a given round.
+"
+ITM8|Concept: Player Gains (per round)|"
+The points scored by a player during a single round.
+Non-negative integer.
 "
