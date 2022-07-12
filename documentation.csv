@@ -8,7 +8,7 @@ Flush (score-tracking tool)
 - [ITM12]: To-do list
 "
 ITM2|Feature List|"
-* [ITM3] View all info pertaining to the game
+* [ITM3] View all game data elements
 * [ITM4] Add a player to the game
 * [ITM5] Remove a player from the game
 * [ITM7] Inscribe a player's gains in a given round
@@ -22,7 +22,7 @@ Tentative features:
 * Implement sorting
 * All features are mobile-friendly/first
 "
-ITM3|Feature: View all info|"
+ITM3|Feature: View game data|"
 Information displayed:
 * Player names (ITM6)
 * Player gains (ITM8) for each round
