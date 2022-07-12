@@ -1,4 +1,33 @@
 Item|Name|Contents
 ITM1|Title|"
 Flush (score-tracking tool)
+- [ITM1]: Title
+- [ITM2]: Feature List
+"
+ITM2|Feature List|"
+* [ITM3] View all info pertaining to the game
+* [ITM4] Add a player to the game
+* [ITM5] Remove a player from the game
+Tentative features:
+* Sum of scores can be viewed up to an arbitrary round
+* Export to text format
+* Implement sorting
+"
+ITM3|Feature: View all info|"
+Information displayed:
+* Player names (ITM6)
+* Player score gained in each round
+* Sum of scores for each player
+"
+ITM4|Feature: Add player|"
+Details:
+* A means of adding a player is visible
+* Player name can be chosen (ITM6)
+"
+ITM5|Feature: Remove player|"
+
+"
+ITM6|Concept: Player Name|"
+The (nick)name of a player.
+Textual.
 "
