@@ -50,6 +50,8 @@ Non-negative integer.
 Initialized to null.
 "
 ITM9|Implementation Plan|"
+# Code-Complexity Consideration:
+
 In favour of initial feature-development efficiency
 we choose to forego aspirations of 'proper' implementation
 using such alien technologies
@@ -60,6 +62,12 @@ and the like.
 As such, the initial build plan is
 to simply use current knowledge of JS, HTML and CSS
 to achieve functionality in an intuitive manner.
+
+Additionally,
+[ITM15] would have required implementation
+of the full-blown CRUD-pub/sub framework.
+Appropriate shortcuts will instead be taken
+to avoid this complexity.
 "
 ITM10|Methodology|"
 Specific design choices and principles are outlined here in 'Methodology'.
@@ -85,8 +93,11 @@ P4
 "
 ITM13|Player Score Calculation|"
 Each player's score (ITM14) is displayed (with ITM3).
-The scores (ITM14) are updated automatically.
+The scores (ITM14) are updated automatically (ITM15).
 "
 ITM14|Concept: Player Score|"
 The sum of all of a player's gains (ITM8).
+"
+ITM15|Concept(Technical): Dynamic Refresh|"
+Code logic triggered by an event.
 "
