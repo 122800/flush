@@ -47,6 +47,7 @@ A player's gains (ITM8) can be inscribed for a given round.
 ITM8|Concept: Player Gains (per round)|"
 The points scored by a player during a single round.
 Non-negative integer.
+Initialized to null.
 "
 ITM9|Implementation Plan|"
 In favour of initial feature-development efficiency
