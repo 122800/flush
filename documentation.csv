@@ -5,6 +5,7 @@ Flush (score-tracking tool)
 - [ITM2]: Feature List
 - [ITM9]: Implementation Plan
 - [ITM10]: Methodology
+- [ITM12]: To-do list
 "
 ITM2|Feature List|"
 * [ITM3] View all info pertaining to the game
@@ -62,8 +63,8 @@ ITM10|Methodology|"
 Specific design choices and principles are outlined here in 'Methodology'.
 
 * Project layout:
-    ./src               : Code assets
-    ./src/index.html    : Main file / Starting point
+  ./src             : Code assets
+  ./src/index.html  : Main file / Starting point
 
 For simplicity we may choose to combine all assets
 in a single file,
@@ -71,4 +72,9 @@ to begin with.
 "
 ITM11|Additional Meta-data|"
 * The tool's name: `Mellbye Flush`
+"
+ITM12|To-do List|"
+P4
+* Configure relevant HTML 'meta' tags
+  https://www.w3schools.com/tags/tag_meta.asp
 "
