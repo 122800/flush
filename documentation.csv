@@ -1,4 +1,4 @@
-Item|Name|Contents
+Item|Name|Contents|Links
 ITM1|Title|"
 Flush (score-tracking tool)
 - [ITM1]: Title
@@ -6,7 +6,7 @@ Flush (score-tracking tool)
 - [ITM9]: Implementation Plan
 - [ITM10]: Methodology
 - [ITM12]: To-do list
-"
+"|""
 ITM2|Feature List|"
 * [ITM3] View all game data elements
 * [ITM13] Player score is calculated automatically & displayed
@@ -22,33 +22,33 @@ Tentative features:
 * Export to text format
 * Implement sorting
 * All features are mobile-friendly/first
-"
+"|""
 ITM3|Feature: View game data|"
 Information displayed:
 * Player names (ITM6)
 * Player gains (ITM8) for each round
-"
+"|""
 ITM4|Feature: Add player|"
 Details:
 * A means of adding a player is visible
 * Player name can be chosen (ITM6)
-"
+"|""
 ITM5|Feature: Remove player|"
 Details:
 * A means of deleting a player is visible
-"
+"|""
 ITM6|Concept: Player Name|"
 The (nick)name of a player.
 Textual.
-"
+"|""
 ITM7|Feature: Inscribe score|"
 A player's gains (ITM8) can be inscribed for a given round.
-"
+"|""
 ITM8|Concept: Player Gains (per round)|"
 The points scored by a player during a single round.
 Non-negative integer.
 Initialized to blank '' to indicate no data.
-"
+"|""
 ITM9|Implementation Plan|"
 # Code-Complexity Consideration:
 
@@ -68,7 +68,7 @@ Additionally,
 of the full-blown CRUD-pub/sub framework.
 Appropriate shortcuts will instead be taken
 to avoid this complexity.
-"
+"|""
 ITM10|Methodology|"
 Specific design choices and principles are outlined here in 'Methodology'.
 
@@ -79,10 +79,10 @@ Specific design choices and principles are outlined here in 'Methodology'.
 For simplicity we may choose to combine all assets
 in a single file,
 to begin with.
-"
+"|""
 ITM11|Additional Meta-data|"
 * The tool's name: `Mellbye Flush`
-"
+"|""
 ITM12|To-do List|"
 P4
 * Configure relevant HTML 'meta' tags
@@ -90,14 +90,14 @@ P4
   https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag
 * Configure relevant HTML 'global' attributes
   https://www.w3schools.com/tags/ref_standardattributes.asp
-"
+"|""
 ITM13|Player Score Calculation|"
 Each player's score (ITM14) is displayed (with ITM3).
 The scores (ITM14) are updated automatically (ITM15).
-"
+"|""
 ITM14|Concept: Player Score|"
 The sum of all of a player's gains (ITM8).
-"
+"|""
 ITM15|Concept(Technical): Dynamic Refresh|"
 Code logic triggered by an event.
-"
+"|""
