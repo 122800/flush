@@ -90,7 +90,8 @@ Given that each 'input' can only have one 'form_id' tag,
 it also means that the form must potentially comply
 with a scope greater than only the [ITM13] feature.
 
-The chosen scope is 'ITM8-player-gains'
+The chosen scope is 'ITM8-gains-collection'
+with one 'form' element per player,
 and we'll see how it goes.
 "|""
 ITM10|Methodology|"
