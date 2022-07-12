@@ -3,6 +3,8 @@ ITM1|Title|"
 Flush (score-tracking tool)
 - [ITM1]: Title
 - [ITM2]: Feature List
+- [ITM9]: Implementation Plan
+- [ITM10]: Methodology
 "
 ITM2|Feature List|"
 * [ITM3] View all info pertaining to the game
@@ -13,6 +15,7 @@ Tentative features:
 * Sum of scores can be viewed up to an arbitrary round
 * Export to text format
 * Implement sorting
+* All features are mobile-friendly/first
 "
 ITM3|Feature: View all info|"
 Information displayed:
@@ -39,4 +42,19 @@ A player's gains (ITM8) can be inscribed for a given round.
 ITM8|Concept: Player Gains (per round)|"
 The points scored by a player during a single round.
 Non-negative integer.
+"
+ITM9|Implementation Plan|"
+In favour of initial feature-development efficiency
+we choose to forego aspirations of 'proper' implementation
+using such alien technologies
+as TypeScript,
+HTML modules,
+and the like.
+
+As such, the initial build plan is
+to simply use current knowledge of JS, HTML and CSS
+to achieve functionality in an intuitive manner.
+"
+ITM10|Methodology|"
+Specific design choices and principles are outlined here in 'Methodology'.
 "
