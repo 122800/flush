@@ -11,7 +11,10 @@ ITM2|Feature List|"
 * [ITM4] Add a player to the game
 * [ITM5] Remove a player from the game
 * [ITM7] Inscribe a player's gains in a given round
+* [ITM11] Additional meta-data is available
+
 Tentative features:
+
 * Sum of scores can be viewed up to an arbitrary round
 * Export to text format
 * Implement sorting
@@ -65,4 +68,7 @@ Specific design choices and principles are outlined here in 'Methodology'.
 For simplicity we may choose to combine all assets
 in a single file,
 to begin with.
+"
+ITM11|Additional Meta-data|"
+* The tool's name: `Mellbye Flush`
 "
