@@ -16,6 +16,7 @@ ITM2|Feature List|"
 
 Tentative features:
 
+* Page-reload warning (prompt) to prevent accidental data loss
 * Sum of scores can be viewed up to an arbitrary round
 * Export to text format
 * Implement sorting
