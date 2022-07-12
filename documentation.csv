@@ -72,7 +72,7 @@ of the full-blown CRUD-pub/sub framework.
 Appropriate shortcuts will instead be taken
 to avoid this complexity.
 
-# Implementing ITM13 (Score Calculation)
+# Implementing [ITM13] (Score Calculation)
 
 An HTML 'form' element is used
 because it allows centralized event-handling
@@ -81,6 +81,17 @@ of all child elements.
 To avoid submitting arbitrary tags to the scope of the 'form' tag,
 the 'form' element will be defined separately
 and referenced by detached 'input' elements.
+
+In order to capture changes to [ITM8] elements,
+their data will be stored in HTML 'input' elements.
+This means that all features need to be reviewed
+for compatibility or conflicts with this change.
+Given that each 'input' can only have one 'form_id' tag,
+it also means that the form must potentially comply
+with a scope greater than only the [ITM13] feature.
+
+The chosen scope is 'ITM8-player-gains'
+and we'll see how it goes.
 "|""
 ITM10|Methodology|"
 Specific design choices and principles are outlined here in 'Methodology'.
