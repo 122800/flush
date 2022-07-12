@@ -113,10 +113,11 @@ Updates to the encompassed item must be reflected
 in the encompassing one.
 "|""
 ITM17|Feature: Rounds Labeled|"
-The 5 standard rounds are labeled as follows:
+The 6 standard rounds are labeled as follows:
 - `To tress`
 - `En tress en serie`
 - `To serier`
 - `Tre tress`
 - `To tress en serie`
+- `En tress to serier`
 "|""
