@@ -8,7 +8,7 @@ Flush (score-tracking tool)
 - [ITM12]: To-do list
 "|""
 ITM2|Feature List|"
-* [ITM17] The game's rounds are labeled
+* [ITM17] The game rounds are labeled
 * [ITM3] View all game data elements
 * [ITM13] Player score is calculated automatically & displayed
 * [ITM4] Add a player to the game
@@ -71,6 +71,30 @@ Additionally,
 of the full-blown CRUD-pub/sub framework.
 Appropriate shortcuts will instead be taken
 to avoid this complexity.
+
+# Implementing [ITM13] (Score Calculation)
+
+An HTML 'form' element is used
+because it allows centralized event-handling
+of all child elements.
+
+To avoid submitting arbitrary tags to the scope of the 'form' tag,
+the 'form' element will be defined separately
+and referenced by detached 'input' elements.
+
+In order to capture changes to [ITM8] elements,
+their data will be stored in HTML 'input' elements.
+This means that all features need to be reviewed
+for compatibility or conflicts with this change.
+Given that each 'input' can only have one 'form_id' tag,
+it also means that the form must potentially comply
+with a scope greater than only the [ITM13] feature.
+
+The chosen scope is 'ITM8-gains-collection'
+with one 'form' element per player,
+and we'll see how it goes.
+
+And actually you can use the HTML 'output' element for this!
 "|""
 ITM10|Methodology|"
 Specific design choices and principles are outlined here in 'Methodology'.
