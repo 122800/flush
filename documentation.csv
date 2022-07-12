@@ -48,7 +48,9 @@ ITM8|Concept: Player Gains (per round)|"
 The points scored by a player during a single round.
 Non-negative integer.
 Initialized to blank '' to indicate no data.
-"|""
+"|"
+Encompassed:ITM13
+"
 ITM9|Implementation Plan|"
 # Code-Complexity Consideration:
 
@@ -94,7 +96,9 @@ P4
 ITM13|Player Score Calculation|"
 Each player's score (ITM14) is displayed.
 The scores (ITM14) are updated automatically (ITM15).
-"|""
+"|"
+Encompasses:ITM8
+"
 ITM14|Concept: Player Score|"
 The sum of all of a player's gains (ITM8).
 "|""
