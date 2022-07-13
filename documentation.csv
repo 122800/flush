@@ -161,3 +161,11 @@ ITM18|Feature: Point-Based Sort|"
 Players can be sorted visually based on their points.
 The sort can be applied from any round.
 "|""
+ITM19|Link: Consume|"
+An item consumes or is consumed.
+An item processes the contents of another.
+Datatype constraints from the consumed item
+are transferred / must be handled by the consuming one.
+Updates to the consumed item
+may need to be reflected in the consuming one.
+"|""
