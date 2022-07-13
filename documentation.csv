@@ -45,7 +45,9 @@ Details:
 ITM6|Concept: Player Name|"
 The (nick)name of a player.
 Textual.
-"|""
+"|"
+Consumed:ITM18
+"
 ITM7|Feature: Inscribe score|"
 A player's gains (ITM8) can be inscribed for a given round.
 "|""
@@ -54,6 +56,7 @@ The points scored by a player during a single round.
 Non-negative integer.
 Initialized to blank '' to indicate no data.
 "|"
+Consumed:ITM18
 Encompassed:ITM13
 "
 ITM9|Implementation Plan|"
@@ -143,7 +146,9 @@ Encompasses:ITM8
 "
 ITM14|Concept: Player Score|"
 The sum of all of a player's gains (ITM8).
-"|""
+"|"
+Consumed:ITM18
+"
 ITM15|Concept(Technical): Dynamic Refresh|"
 Code logic triggered by an event.
 "|""
@@ -163,9 +168,19 @@ The 6 standard rounds are labeled as follows:
 - `En tress to serier`
 "|""
 ITM18|Feature: Point-Based Sort|"
-Players can be sorted visually based on their points.
-The sort can be applied from any round.
-"|""
+- Players can be sorted visually.
+- The sort can be applied from
+  (introduces data-type dependencies):
+* Player name [ITM6]
+* Player gains [ITM8] for a round
+* Player score [ITM14]
+- The availability of the sort functionality
+  should be indicated to the user.
+"|"
+Consumes:ITM6
+Consumes:ITM8
+Consumes:ITM14
+"
 ITM19|Link: Consume|"
 An item consumes or is consumed.
 An item processes the contents of another.
