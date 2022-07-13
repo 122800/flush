@@ -190,6 +190,8 @@
 
             $: {
                 game: document.getElementById("game"),
+                // get rows except for the first
+                rows: document.querySelectorAll("#game tr + tr"),
                 forms: document.querySelectorAll("#game form"),
             },
 
@@ -203,11 +205,30 @@
                 form.ITM13.value = sum;
             },
 
-            sortTable(column) {
-                let forms = this.$.forms;
-                forms.forEach(f => {
-                    console.log(f.elements[column]);
-                });
+            sortTable(column) {/*ITM18*/
+                let $rows = Flush.$.rows;
+                let $forms = this.$.forms;
+
+                let i = 0;
+                let indexedRowList = Array.from($forms).reduce((l, $form) => {
+                    l.push({
+                        index: i,
+                        value: $form.elements[column].value,
+                        $row: $rows[i],
+                    });
+                    i++;
+                    return l;
+                }, []);
+
+                // first column is alphabetical
+                if(column == 0) indexedRowList.sort((a, b) => a.value.localeCompare(b.value));
+                // all others are sorted numerically
+                // in case of numerical match, no need for alphabetical fallback
+                else indexedRowList.sort((a, b) => a.value - b.value);
+
+                for (let i = 0; i < indexedRowList.length; i++) {
+                    indexedRowList[i].$row.style["grid-row-start"] = 2 + i;
+                }
             },
         };
     </script>
