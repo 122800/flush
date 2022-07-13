@@ -11,13 +11,13 @@ ITM2|Feature List|"
 * [ITM17] The game rounds are labeled
 * [ITM3] View all game data elements
 * [ITM13] Player score is calculated automatically & displayed
-* [ITM4] Add a player to the game
-* [ITM5] Remove a player from the game
 * [ITM7] Inscribe a player's gains in a given round
 * [ITM11] Additional meta-data is available
 
 Tentative features:
 
+* [ITM4] Add a player to the game
+* [ITM5] Remove a player from the game
 * Sum of scores can be viewed up to an arbitrary round
 * Export to text format
 * All features are mobile-friendly/first
