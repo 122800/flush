@@ -13,6 +13,7 @@ ITM2|Feature List|"
 * [ITM13] Player score is calculated automatically & displayed
 * [ITM7] Inscribe a player's gains in a given round
 * [ITM11] Additional meta-data is visible
+* [ITM18] Players can be sorted visually by points
 
 Tentative features:
 
@@ -115,8 +116,6 @@ ITM11|Additional Meta-data|"
 * The version number
 "|""
 ITM12|To-do List|"
-P1
-* Implement sorting
 P2
 * Implement data persistence fail-safe
   (or: page-reload warning (prompt)
@@ -157,4 +156,8 @@ The 6 standard rounds are labeled as follows:
 - `Tre tress`
 - `To tress en serie`
 - `En tress to serier`
+"|""
+ITM18|Feature: Point-Based Sort|"
+Players can be sorted visually based on their points.
+The sort can be applied from any round.
 "|""
