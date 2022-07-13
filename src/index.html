@@ -187,6 +187,12 @@
         "use strict";
 
         const Flush = {
+
+            $: {
+                game: document.getElementById("game"),
+                forms: document.querySelectorAll("#game form"),
+            },
+
             calcFormScore(form) {/*ITM13*/
                 let sum = 0;
                 Array.from(form.elements).forEach(e => {
@@ -195,7 +201,14 @@
                     sum += parseInt(e.value, 10);
                 });
                 form.ITM13.value = sum;
-            }
+            },
+
+            sortTable(column) {
+                let forms = this.$.forms;
+                forms.forEach(f => {
+                    console.log(f.elements[column]);
+                });
+            },
         };
     </script>
 </body>
