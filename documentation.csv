@@ -123,6 +123,11 @@ P2
 P3
 * Allow filling in from average of others
   for new-comers/quitters
+* Sort [ITM18] needs to be displayed properly
+  (arrow + cursor for desktop)
+* Sort [ITM18] needs to be aware of invalidated sort
+  when points change
+  (let go of 'sorted' indication?)
 P4
 * Configure relevant HTML 'meta' tags
   https://www.w3schools.com/tags/tag_meta.asp
