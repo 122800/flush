@@ -1,4 +1,159 @@
-Item|Name|Contents
+Item|Name|Contents|Links
 ITM1|Title|"
 Flush (score-tracking tool)
+- [ITM1]: Title
+- [ITM2]: Feature List
+- [ITM9]: Implementation Plan
+- [ITM10]: Methodology
+- [ITM12]: To-do list
+"|""
+ITM2|Feature List|"
+* [ITM17] The game rounds are labeled
+* [ITM3] View all game data elements
+* [ITM13] Player score is calculated automatically & displayed
+* [ITM4] Add a player to the game
+* [ITM5] Remove a player from the game
+* [ITM7] Inscribe a player's gains in a given round
+* [ITM11] Additional meta-data is available
+
+Tentative features:
+
+* Sum of scores can be viewed up to an arbitrary round
+* Export to text format
+* All features are mobile-friendly/first
+
+TODO: split feature description
+into 'functional need',
+'abstract model',
+and 'technical implementation'
+"|""
+ITM3|Feature: View game data|"
+Information displayed:
+* Player names (ITM6)
+* Player gains (ITM8) for each round
+"|""
+ITM4|Feature: Add player|"
+Details:
+* A means of adding a player is visible
+* Player name can be chosen (ITM6)
+"|""
+ITM5|Feature: Remove player|"
+Details:
+* A means of deleting a player is visible
+"|""
+ITM6|Concept: Player Name|"
+The (nick)name of a player.
+Textual.
+"|""
+ITM7|Feature: Inscribe score|"
+A player's gains (ITM8) can be inscribed for a given round.
+"|""
+ITM8|Concept: Player Gains (per round)|"
+The points scored by a player during a single round.
+Non-negative integer.
+Initialized to blank '' to indicate no data.
+"|"
+Encompassed:ITM13
 "
+ITM9|Implementation Plan|"
+# Code-Complexity Consideration:
+
+In favour of initial feature-development efficiency
+we choose to forego aspirations of 'proper' implementation
+using such alien technologies
+as TypeScript,
+HTML modules,
+and the like.
+
+As such, the initial build plan is
+to simply use current knowledge of JS, HTML and CSS
+to achieve functionality in an intuitive manner.
+
+Additionally,
+[ITM15] would have required implementation
+of the full-blown CRUD-pub/sub framework.
+Appropriate shortcuts will instead be taken
+to avoid this complexity.
+
+# Implementing [ITM13] (Score Calculation)
+
+An HTML 'form' element is used
+because it allows centralized event-handling
+of all child elements.
+
+To avoid submitting arbitrary tags to the scope of the 'form' tag,
+the 'form' element will be defined separately
+and referenced by detached 'input' elements.
+
+In order to capture changes to [ITM8] elements,
+their data will be stored in HTML 'input' elements.
+This means that all features need to be reviewed
+for compatibility or conflicts with this change.
+Given that each 'input' can only have one 'form_id' tag,
+it also means that the form must potentially comply
+with a scope greater than only the [ITM13] feature.
+
+The chosen scope is 'ITM8-gains-collection'
+with one 'form' element per player,
+and we'll see how it goes.
+
+And actually you can use the HTML 'output' element for this!
+"|""
+ITM10|Methodology|"
+Specific design choices and principles are outlined here in 'Methodology'.
+
+* Project layout:
+  ./src             : Code assets
+  ./src/index.html  : Main file / Starting point
+
+For simplicity we may choose to combine all assets
+in a single file,
+to begin with.
+"|""
+ITM11|Additional Meta-data|"
+* The tool's name: `Mellbye Flush`
+"|""
+ITM12|To-do List|"
+P1
+* Implement sorting
+P2
+* Implement data persistence fail-safe
+  (or: page-reload warning (prompt)
+  to prevent accidental data loss)
+P3
+* Allow filling in from average of others
+  for new-comers/quitters
+P4
+* Configure relevant HTML 'meta' tags
+  https://www.w3schools.com/tags/tag_meta.asp
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag
+* Configure relevant HTML 'global' attributes
+  https://www.w3schools.com/tags/ref_standardattributes.asp
+"|""
+ITM13|Player Score Calculation|"
+Each player's score (ITM14) is displayed.
+The scores (ITM14) are updated automatically (ITM15).
+"|"
+Encompasses:ITM8
+"
+ITM14|Concept: Player Score|"
+The sum of all of a player's gains (ITM8).
+"|""
+ITM15|Concept(Technical): Dynamic Refresh|"
+Code logic triggered by an event.
+"|""
+ITM16|Link: Encompass|"
+An item encompasses or is encompassed.
+An item relies/depends on the scope defined by another.
+Updates to the encompassed item must be reflected
+in the encompassing one.
+"|""
+ITM17|Feature: Rounds Labeled|"
+The 6 standard rounds are labeled as follows:
+- `To tress`
+- `En tress en serie`
+- `To serier`
+- `Tre tress`
+- `To tress en serie`
+- `En tress to serier`
+"|""
