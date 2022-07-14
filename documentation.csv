@@ -3,6 +3,7 @@ ITM1|Title|"
 Flush (score-tracking tool)
 - [ITM1]  : Title
 - [ITM2]  : Feature List
+- [ITM21] : Known Issues
 - [ITM9]  : Implementation Plan
 - [ITM10] : Methodology
 - [ITM12] : To-do list
@@ -14,6 +15,7 @@ ITM2|Feature List|"
 * [ITM7] Inscribe a player's gains in a given round
 * [ITM11] Additional meta-data is visible
 * [ITM18] Players can be sorted visually by points
+* [ITM20] Game data is protected from accidental loss on page close/reload
 
 Tentative features:
 
@@ -122,10 +124,6 @@ ITM11|Additional Meta-data|"
 * The version number
 "|""
 ITM12|To-do List|"
-P2
-* Implement data persistence fail-safe
-  (or: page-reload warning (prompt)
-  to prevent accidental data loss)
 P3
 * Allow filling in from average of others
   for new-comers/quitters
@@ -133,6 +131,8 @@ P3
   when points change
   (let go of 'sorted' indication?)
 * Control & sanitize user input
+* Improve page-reload warning (ITM20) behaviour
+  when there are no unsaved changes
 P4
 * Configure relevant HTML 'meta' tags
   https://www.w3schools.com/tags/tag_meta.asp
@@ -189,4 +189,19 @@ Datatype constraints from the consumed item
 are transferred / must be handled by the consuming one.
 Updates to the consumed item
 may need to be reflected in the consuming one.
+"|""
+ITM20|Feature: Accidental Reset Protection|"
+A security mechanism is in place
+to avoid accidentally losing the game progress
+by closing or reloading the page.
+"|""
+ITM21|Known Issues|"
+* [ITM22] BFCache Incompatibility
+"|""
+ITM22|Issue: BFCache Incompatibility|"
+Use of the 'beforeunload event' results in incompatibility
+with the bfcache browser mechanism,
+as documented in [1], [2].
+[1]: https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event
+[2]: https://web.dev/bfcache/
 "|""
