@@ -1,11 +1,11 @@
 Item|Name|Contents|Links
 ITM1|Title|"
 Flush (score-tracking tool)
-- [ITM1]: Title
-- [ITM2]: Feature List
-- [ITM9]: Implementation Plan
-- [ITM10]: Methodology
-- [ITM12]: To-do list
+- [ITM1]  : Title
+- [ITM2]  : Feature List
+- [ITM9]  : Implementation Plan
+- [ITM10] : Methodology
+- [ITM12] : To-do list
 "|""
 ITM2|Feature List|"
 * [ITM17] The game rounds are labeled
