@@ -13,9 +13,9 @@ ITM2|Feature List|"
 * [ITM3] View all game data elements
 * [ITM13] Player score is calculated automatically & displayed
 * [ITM7] Inscribe a player's gains in a given round
-* [ITM11] Additional meta-data is visible
 * [ITM18] Players can be sorted visually by points
 * [ITM20] Game data is protected from accidental loss on page close/reload
+* [ITM11] Additional meta-data is visible
 
 Tentative features:
 
