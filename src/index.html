@@ -35,23 +35,19 @@
             width: 100%;
         }
 
-        /*ITM18*/
-        #game tbody {
+        #game tbody {/*ITM18*/
             display: grid;
             min-width: 100%;
             grid-template-columns: repeat(7, 3fr) 1fr;
         }
-        /*ITM18*/
-        #game tr {
+        #game tr {/*ITM18*/
             display: contents;
         }
-        #game tr td {
+        #game tr td {/*ITM18*/
             grid-row-start: inherit;
         }
-
-        #game th {
-            padding: 8px;
-            cursor: pointer;/*ITM18*/
+        #game th {/*ITM18*/
+            cursor: pointer;
         }
         #game th:after {/*ITM18*/
             content: "\25b4";
@@ -61,6 +57,10 @@
         #game th.sort-active:after,
         #game th:hover:after {/*ITM18*/
             visibility: visible;
+        }
+
+        #game th {
+            padding: 8px;
         }
         #game td, #game th {
             border: 1.3px solid #023654;
