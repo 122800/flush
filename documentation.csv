@@ -127,7 +127,7 @@ P2
 P3
 * Allow filling in from average of others
   for new-comers/quitters
-* Sort [ITM18] should be aware of invalidated sort
+* Sort (ITM18) should be aware of invalidated sort
   when points change
   (let go of 'sorted' indication?)
 P4
@@ -169,9 +169,9 @@ The 6 standard rounds are labeled as follows:
 ITM18|Feature: Point-Based Sort|"
 - Players can be sorted visually (ASC only).
 - The sort can be applied from:
-  * Player name [ITM6] (the default)
-  * Player gains [ITM8] for a round
-  * Player score [ITM14]
+  * Player name (ITM6) (the default)
+  * Player gains (ITM8) for a round
+  * Player score (ITM14)
 - The availability of the sort functionality
   should be indicated to the user.
 "|"
