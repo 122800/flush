@@ -10,12 +10,12 @@ Flush (score-tracking tool)
 "|""
 ITM2|Feature List|"
 * [ITM17] : The game rounds are labeled
-* [ITM3]  : View all game data elements
+* [ITM3]  : View all game data (ITM23) elements
 * [ITM13] : Player score is calculated automatically & displayed
 * [ITM7]  : Inscribe a player's gains in a given round
 * [ITM4]  : Add a player to the game
 * [ITM18] : Players can be sorted visually by points
-* [ITM20] : Game data is protected from accidental loss on page close/reload
+* [ITM20] : Game data (ITM23) is protected from accidental loss on page close/reload
 * [ITM11] : Additional meta-data is visible
 
 Tentative features:
@@ -31,10 +31,8 @@ into 'functional need',
 'abstract model',
 and 'technical implementation'
 "|""
-ITM3|Feature: View game data|"
-Information displayed:
-* Player names (ITM6)
-* Player gains (ITM8) for each round
+ITM3|Feature: View game data (ITM23)|"
+Game data elements (ITM23) are visible and accessible to the user.
 "|""
 ITM4|Feature: Add player|"
 Details:
@@ -193,7 +191,7 @@ may need to be reflected in the consuming one.
 "|""
 ITM20|Feature: Accidental Reset Protection|"
 A security mechanism is in place
-to avoid accidentally losing the game progress
+to avoid accidentally losing the game data (ITM23)
 by closing or reloading the page.
 "|""
 ITM21|Known Issues|"
@@ -205,4 +203,11 @@ with the bfcache browser mechanism,
 as documented in [1], [2].
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event
 [2]: https://web.dev/bfcache/
+"|""
+ITM23|Concept: Game Data|"
+Game data-points provided by the user.
+These cannot be regenerated or calculated automatically
+and must be protected from data loss or corruption.
+* Player names (ITM6)
+* Player gains (ITM8) for each round
 "|""
