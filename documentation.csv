@@ -116,7 +116,7 @@ For simplicity we may choose to combine all assets
 in a single file,
 to begin with.
 "|""
-ITM11|Additional Meta-data|"
+ITM11|Feature: Additional Meta-data|"
 * The tool's name: `Mellbye Flush`
 * The version number
 "|""
@@ -139,7 +139,7 @@ P4
 * Configure relevant HTML 'global' attributes
   https://www.w3schools.com/tags/ref_standardattributes.asp
 "|""
-ITM13|Player Score Calculation|"
+ITM13|Feature: Player Score Calculation|"
 Each player's score (ITM14) is displayed.
 The scores (ITM14) are updated automatically (ITM15).
 "|"
