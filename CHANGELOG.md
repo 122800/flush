@@ -8,6 +8,13 @@ The format is based on [Keep a Changelog]
 and this project adheres to [Semantic Versioning]
 (https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added 
+
+- Ability to sort users alphabetically or by lowest score
+  (inverse sort not available as of now)
+
 ## [1.0.0] - 2022-07-13
 
 ### Added
