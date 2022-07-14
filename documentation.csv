@@ -3,6 +3,7 @@ ITM1|Title|"
 Flush (score-tracking tool)
 - [ITM1]  : Title
 - [ITM2]  : Feature List
+- [ITM21] : Known Issues
 - [ITM9]  : Implementation Plan
 - [ITM10] : Methodology
 - [ITM12] : To-do list
@@ -190,4 +191,14 @@ ITM20|Feature: Accidental Reset Protection|"
 A security mechanism is in place
 to avoid accidentally losing the game progress
 by closing or reloading the page.
+"|""
+ITM21|Known Issues|"
+* [ITM22] BFCache Incompatibility
+"|""
+ITM22|Issue: BFCache Incompatibility|"
+Use of the 'beforeunload event' results in incompatibility
+with the bfcache browser mechanism,
+as documented in [1], [2].
+[1]: https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event
+[2]: https://web.dev/bfcache/
 "|""
