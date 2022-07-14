@@ -168,12 +168,11 @@ The 6 standard rounds are labeled as follows:
 - `En tress to serier`
 "|""
 ITM18|Feature: Point-Based Sort|"
-- Players can be sorted visually.
-- The sort can be applied from
-  (introduces data-type dependencies):
-* Player name [ITM6]
-* Player gains [ITM8] for a round
-* Player score [ITM14]
+- Players can be sorted visually (ASC only).
+- The sort can be applied from:
+  * Player name [ITM6]
+  * Player gains [ITM8] for a round
+  * Player score [ITM14]
 - The availability of the sort functionality
   should be indicated to the user.
 "|"
