@@ -130,6 +130,7 @@ P3
 * Sort (ITM18) should be aware of invalidated sort
   when points change
   (let go of 'sorted' indication?)
+* Control & sanitize user input
 P4
 * Configure relevant HTML 'meta' tags
   https://www.w3schools.com/tags/tag_meta.asp
