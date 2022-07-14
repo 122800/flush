@@ -53,6 +53,10 @@
             padding: 8px;
             cursor: pointer;/*ITM18*/
         }
+        #game th.sort-active:after,
+        #game th:hover:after {/*ITM18*/
+            content: "\25b4";
+        }
         #game td, #game th {
             border: 1.3px solid #023654;
         }
@@ -93,7 +97,7 @@
 
     <table id="game"><!-- ITM3 -->
         <tr>
-            <th onclick="Flush.sortTable(0)">Spiller</th>
+            <th onclick="Flush.sortTable(0)" class="sort-active">Spiller</th>
             <th onclick="Flush.sortTable(1)">♠♦♣</th><!-- ITM17 -->
             <th onclick="Flush.sortTable(2)">1&nbsp;(♠♦♣) 1&nbsp;(♠♠♠♠)</th><!-- ITM17 -->
             <th onclick="Flush.sortTable(3)">2&nbsp;(♠♠♠♠)</th><!-- ITM17 -->
@@ -191,6 +195,7 @@
 
             $: {
                 game: document.getElementById("game"),
+                headers: document.querySelectorAll("#game th"),
                 // get rows except for the first
                 rows: document.querySelectorAll("#game tr + tr"),
                 forms: document.querySelectorAll("#game form"),
@@ -207,8 +212,17 @@
             },
 
             sortTable(column) {/*ITM18*/
+                let $headers = Flush.$.headers;
                 let $rows = Flush.$.rows;
                 let $forms = this.$.forms;
+
+                // set/unset css class on headers
+                for (let i = 0; i < $headers.length; i++) {
+                    // add to the clicked column
+                    if(i == column) $headers[i].classList.add("sort-active");
+                    // remove from all others
+                    else $headers[i].classList.remove("sort-active");
+                }
 
                 let i = 0;
                 let indexedRowList = Array.from($forms).reduce((l, $form) => {
