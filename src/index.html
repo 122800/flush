@@ -53,9 +53,14 @@
             padding: 8px;
             cursor: pointer;/*ITM18*/
         }
+        #game th:after {/*ITM18*/
+            content: "\25b4";
+            /* always visible but hidden to maintain spacing */
+            visibility: hidden;
+        }
         #game th.sort-active:after,
         #game th:hover:after {/*ITM18*/
-            content: "\25b4";
+            visibility: visible;
         }
         #game td, #game th {
             border: 1.3px solid #023654;
