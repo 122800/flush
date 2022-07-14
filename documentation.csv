@@ -129,7 +129,8 @@ P3
   when points change
   (let go of 'sorted' indication?)
 * Control & sanitize user input
-* Implement data persistence fail-safe
+* Improve page-reload warning (ITM20) behaviour
+  when there are no unsaved changes
 P4
 * Configure relevant HTML 'meta' tags
   https://www.w3schools.com/tags/tag_meta.asp
