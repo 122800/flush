@@ -125,7 +125,7 @@
             </tr>
         </table>
         <div>
-            <button type="button">+</button>
+            <button type="button" onclick="Flush.addPlayer()">+</button>
         </div>
     </section>
 
@@ -135,6 +135,7 @@
         const Flush = {
 
             $: {
+                game: document.getElementById("game"),
                 headers: document.querySelectorAll("#game th"),
                 // get rows except for the first
                 rows: document.querySelectorAll("#game tr + tr"),
@@ -186,11 +187,34 @@
                 }
             },
 
+            addPlayer() {/*ITM4*/
+                let $gameTable = Flush.$.game.children[0];// game > tbody
+                let playerNum = ++Flush.Utils.var.playerNumber;
+                let htmlTemplate = `\
+<td><input form="ITM8-gains-collection-p${playerNum}" value="Player${playerNum}" readonly></td><!-- ITM6 -->
+<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+<td><form id="ITM8-gains-collection-p${playerNum}"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>`
+
+                let $rowNode = document.createElement("tr");
+                $rowNode.innerHTML = htmlTemplate;
+                $gameTable.appendChild($rowNode);
+            },
+
             Utils: {
                 pageUnloadListener(event) {/*ITM20*/
                   event.preventDefault();
                   // this message is not guaranteed to appear in every browser
                   return event.returnValue = 'Er du sikker? Dataen din vil ikke lagres.';
+                },
+
+                // arbitrary variable storage
+                var: {
+                    playerNumber: 0,
                 },
             },
         };
