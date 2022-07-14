@@ -9,22 +9,24 @@ Flush (score-tracking tool)
 - [ITM12] : To-do list
 "|""
 ITM2|Feature List|"
-* [ITM17] : The game rounds are labeled
+The user can…
+* [ITM17] : View an appropriate label for each game round
 * [ITM3]  : View all game data (ITM23) elements
-* [ITM13] : Player score is calculated automatically & displayed
-* [ITM7]  : Inscribe a player's gains in a given round
-* [ITM18] : Players can be sorted visually by points
-* [ITM20] : Game data (ITM23) is protected from accidental loss on page close/reload
-* [ITM11] : Additional meta-data is visible
+* [ITM13] : View each player's calculated player score (ITM14)
+* [ITM7]  : Inscribe a player's gains for a given round
+* [ITM18] : Define the players' visual sort order
+* [ITM20] : Be safeguarded against accidental loss of game data (ITM23)
+            on page close/reload
+* [ITM11] : View additional meta-data relative to the program
 
 Tentative features:
 
 * [ITM4] Add a player to the game
 * [ITM5] Remove a player from the game
-* Sum of scores can be viewed up to an arbitrary round
-* Export to text format
-* All features are mobile-friendly/first
-* A reminder of the rules is available for consultation
+* View the scores (ITM14) up to an arbitrary round (mini-graph?)
+* Export game data (ITM23) to text format
+* Benefit from all features with mobile-friendly/first considerations
+* Have access to a reminder of the rules for consultation
 * Virtualization of gameplay
 
 TODO: split feature description
@@ -32,15 +34,15 @@ into 'functional need',
 'abstract model',
 and 'technical implementation'
 "|""
-ITM3|Feature: View game data (ITM23)|"
+ITM3|Feature: View Game Data|"
 Game data elements (ITM23) are visible and accessible to the user.
 "|""
-ITM4|Feature: Add player|"
+ITM4|Feature: Add Player|"
 Details:
 * A means of adding a player is visible
 * Player name can be chosen (ITM6)
 "|""
-ITM5|Feature: Remove player|"
+ITM5|Feature: Remove Player|"
 Details:
 * A means of deleting a player is visible
 "|""
@@ -50,7 +52,7 @@ Textual.
 "|"
 Consumed:ITM18
 "
-ITM7|Feature: Inscribe score|"
+ITM7|Feature: Inscribing Gains per Round|"
 A player's gains (ITM8) can be inscribed for a given round.
 "|""
 ITM8|Concept: Player Gains (per round)|"
@@ -117,7 +119,7 @@ For simplicity we may choose to combine all assets
 in a single file,
 to begin with.
 "|""
-ITM11|Feature: Additional Meta-data|"
+ITM11|Feature: View Program Meta-data|"
 * The tool's name: `Mellbye Flush`
 * The version number
 "|""
@@ -158,7 +160,7 @@ An item relies/depends on the scope defined by another.
 Updates to the encompassed item must be reflected
 in the encompassing one.
 "|""
-ITM17|Feature: Rounds Labeled|"
+ITM17|Feature: Game Round Labels|"
 The 6 standard rounds are labeled as follows:
 - `To tress`
 - `En tress en serie`
@@ -167,7 +169,7 @@ The 6 standard rounds are labeled as follows:
 - `To tress en serie`
 - `En tress to serier`
 "|""
-ITM18|Feature: Point-Based Sort|"
+ITM18|Feature: Player Sort Order|"
 - Players can be sorted visually (ASC only).
 - The sort can be applied from:
   * Player name (ITM6) (the default)
