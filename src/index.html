@@ -117,9 +117,12 @@
             $: {
                 game: document.getElementById("game"),
                 headers: document.querySelectorAll("#game th"),
-                // get rows except for the first
-                rows: document.querySelectorAll("#game tr + tr"),
-                forms: document.querySelectorAll("#game form"),
+
+                dynamic: {
+                    // get rows except for the first
+                    rows() { return document.querySelectorAll("#game tr + tr") },
+                    forms() { return document.querySelectorAll("#game form") },
+                },
             },
 
             calcFormScore(form) {/*ITM13*/
@@ -134,8 +137,8 @@
 
             sortTable(column) {/*ITM18*/
                 let $headers = Flush.$.headers;
-                let $rows = Flush.$.rows;
-                let $forms = this.$.forms;
+                let $rows = Flush.$.dynamic.rows();
+                let $forms = this.$.dynamic.forms();
 
                 // set/unset css class on headers
                 for (let i = 0; i < $headers.length; i++) {
