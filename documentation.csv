@@ -13,6 +13,7 @@ ITM2|Feature List|"
 * [ITM13] Player score is calculated automatically & displayed
 * [ITM7] Inscribe a player's gains in a given round
 * [ITM11] Additional meta-data is visible
+* [ITM18] Players can be sorted visually by points
 
 Tentative features:
 
@@ -44,7 +45,9 @@ Details:
 ITM6|Concept: Player Name|"
 The (nick)name of a player.
 Textual.
-"|""
+"|"
+Consumed:ITM18
+"
 ITM7|Feature: Inscribe score|"
 A player's gains (ITM8) can be inscribed for a given round.
 "|""
@@ -54,6 +57,7 @@ Non-negative integer.
 Multiples of '5' only.
 Initialized to blank '' to indicate no data.
 "|"
+Consumed:ITM18
 Encompassed:ITM13
 "
 ITM9|Implementation Plan|"
@@ -116,8 +120,6 @@ ITM11|Additional Meta-data|"
 * The version number
 "|""
 ITM12|To-do List|"
-P1
-* Implement sorting
 P2
 * Implement data persistence fail-safe
   (or: page-reload warning (prompt)
@@ -125,6 +127,9 @@ P2
 P3
 * Allow filling in from average of others
   for new-comers/quitters
+* Sort [ITM18] should be aware of invalidated sort
+  when points change
+  (let go of 'sorted' indication?)
 P4
 * Configure relevant HTML 'meta' tags
   https://www.w3schools.com/tags/tag_meta.asp
@@ -140,7 +145,9 @@ Encompasses:ITM8
 "
 ITM14|Concept: Player Score|"
 The sum of all of a player's gains (ITM8).
-"|""
+"|"
+Consumed:ITM18
+"
 ITM15|Concept(Technical): Dynamic Refresh|"
 Code logic triggered by an event.
 "|""
@@ -158,4 +165,25 @@ The 6 standard rounds are labeled as follows:
 - `Tre tress`
 - `To tress en serie`
 - `En tress to serier`
+"|""
+ITM18|Feature: Point-Based Sort|"
+- Players can be sorted visually (ASC only).
+- The sort can be applied from:
+  * Player name [ITM6] (the default)
+  * Player gains [ITM8] for a round
+  * Player score [ITM14]
+- The availability of the sort functionality
+  should be indicated to the user.
+"|"
+Consumes:ITM6
+Consumes:ITM8
+Consumes:ITM14
+"
+ITM19|Link: Consume|"
+An item consumes or is consumed.
+An item processes the contents of another.
+Datatype constraints from the consumed item
+are transferred / must be handled by the consuming one.
+Updates to the consumed item
+may need to be reflected in the consuming one.
 "|""

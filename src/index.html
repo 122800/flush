@@ -35,19 +35,43 @@
             width: 100%;
         }
 
+        #game tbody {/*ITM18*/
+            display: grid;
+            min-width: 100%;
+            grid-template-columns: repeat(7, 3fr) 1fr;
+        }
+        #game tr {/*ITM18*/
+            display: contents;
+        }
+        #game tr td {/*ITM18*/
+            grid-row-start: inherit;
+        }
+        #game th {/*ITM18*/
+            cursor: pointer;
+        }
+        #game th:after {/*ITM18*/
+            content: "\25b4";
+            /* always visible but hidden to maintain spacing */
+            visibility: hidden;
+        }
+        #game th.sort-active:after,
+        #game th:hover:after {/*ITM18*/
+            visibility: visible;
+        }
+
         #game th {
             padding: 8px;
         }
         #game td, #game th {
-            border: 2px solid #023654;
+            border: 1.3px solid #023654;
         }
         #game td:last-child {
             font-weight: bold;
         }
 
-        #game tr:nth-child(even){background-color: #F2F2F2;}
-        #game tr:nth-child(odd){background-color: #FFFFFF;}
-        #game tr:hover {background-color: #DDD;}
+        #game tr:nth-child(even) td { background-color: #F2F2F2; }
+        #game tr:nth-child(odd) td { background-color: #FFFFFF; }
+        #game tr:hover td { background-color: #DDD; }
 
         #game th {
             padding-top: 12px;
@@ -78,17 +102,17 @@
 
     <table id="game"><!-- ITM3 -->
         <tr>
-            <th>Spiller</th>
-            <th>To tress</th><!-- ITM17 -->
-            <th>En tress / en serie</th><!-- ITM17 -->
-            <th>To serier</th><!-- ITM17 -->
-            <th>Tre tress</th><!-- ITM17 -->
-            <th>To tress / en serie</th><!-- ITM17 -->
-            <th>En tress / to serier</th><!-- ITM17 -->
-            <th>Sum</th><!-- ITM14 -->
+            <th onclick="Flush.sortTable(0)" class="sort-active">Spiller</th>
+            <th onclick="Flush.sortTable(1)">To tress</th><!-- ITM17 -->
+            <th onclick="Flush.sortTable(2)">En tress / en serie</th><!-- ITM17 -->
+            <th onclick="Flush.sortTable(3)">To serier</th><!-- ITM17 -->
+            <th onclick="Flush.sortTable(4)">Tre tress</th><!-- ITM17 -->
+            <th onclick="Flush.sortTable(5)">To tress / en serie</th><!-- ITM17 -->
+            <th onclick="Flush.sortTable(6)">En tress / to serier</th><!-- ITM17 -->
+            <th onclick="Flush.sortTable(7)">Sum</th><!-- ITM14 -->
         </tr>
         <tr>
-            <td>Emelie</td><!-- ITM6 -->
+            <td><input form="ITM8-gains-collection-p1" value="Emelie" readonly></td><!-- ITM6 -->
             <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
@@ -98,7 +122,7 @@
             <td><form id="ITM8-gains-collection-p1"><output name="ITM13">0</output></form></td>
         </tr>
         <tr>
-            <td>Ingrid</td><!-- ITM6 -->
+            <td><input form="ITM8-gains-collection-p2" value="Ingrid" readonly></td><!-- ITM6 -->
             <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
@@ -108,7 +132,7 @@
             <td><form id="ITM8-gains-collection-p2"><output name="ITM13">0</output></form></td>
         </tr>
         <tr>
-            <td>Lennart</td><!-- ITM6 -->
+            <td><input form="ITM8-gains-collection-p3" value="Lennart" readonly></td><!-- ITM6 -->
             <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
@@ -118,7 +142,7 @@
             <td><form id="ITM8-gains-collection-p3"><output name="ITM13">0</output></form></td>
         </tr>
         <tr>
-            <td>Leovi</td><!-- ITM6 -->
+            <td><input form="ITM8-gains-collection-p4" value="Leovi" readonly></td><!-- ITM6 -->
             <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
@@ -128,7 +152,7 @@
             <td><form id="ITM8-gains-collection-p4"><output name="ITM13">0</output></form></td>
         </tr>
         <tr>
-            <td>Marit</td><!-- ITM6 -->
+            <td><input form="ITM8-gains-collection-p5" value="Marit" readonly></td><!-- ITM6 -->
             <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
@@ -138,7 +162,7 @@
             <td><form id="ITM8-gains-collection-p5"><output name="ITM13">0</output></form></td>
         </tr>
         <tr>
-            <td>Mette</td><!-- ITM6 -->
+            <td><input form="ITM8-gains-collection-p6" value="Mette" readonly></td><!-- ITM6 -->
             <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
@@ -148,7 +172,7 @@
             <td><form id="ITM8-gains-collection-p6"><output name="ITM13">0</output></form></td>
         </tr>
         <tr>
-            <td>Rein</td><!-- ITM6 -->
+            <td><input form="ITM8-gains-collection-p7" value="Rein" readonly></td><!-- ITM6 -->
             <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
@@ -158,7 +182,7 @@
             <td><form id="ITM8-gains-collection-p7"><output name="ITM13">0</output></form></td>
         </tr>
         <tr>
-            <td>Tom Erik</td><!-- ITM6 -->
+            <td><input form="ITM8-gains-collection-p8" value="Tom Erik" readonly></td><!-- ITM6 -->
             <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
             <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
@@ -173,6 +197,14 @@
         "use strict";
 
         const Flush = {
+
+            $: {
+                headers: document.querySelectorAll("#game th"),
+                // get rows except for the first
+                rows: document.querySelectorAll("#game tr + tr"),
+                forms: document.querySelectorAll("#game form"),
+            },
+
             calcFormScore(form) {/*ITM13*/
                 let sum = 0;
                 Array.from(form.elements).forEach(e => {
@@ -181,7 +213,42 @@
                     sum += parseInt(e.value, 10);
                 });
                 form.ITM13.value = sum;
-            }
+            },
+
+            sortTable(column) {/*ITM18*/
+                let $headers = Flush.$.headers;
+                let $rows = Flush.$.rows;
+                let $forms = this.$.forms;
+
+                // set/unset css class on headers
+                for (let i = 0; i < $headers.length; i++) {
+                    // add to the clicked column
+                    if(i == column) $headers[i].classList.add("sort-active");
+                    // remove from all others
+                    else $headers[i].classList.remove("sort-active");
+                }
+
+                let i = 0;
+                let indexedRowList = Array.from($forms).reduce((l, $form) => {
+                    l.push({
+                        index: i,
+                        value: $form.elements[column].value,
+                        $row: $rows[i],
+                    });
+                    i++;
+                    return l;
+                }, []);
+
+                // first column is alphabetical
+                if(column == 0) indexedRowList.sort((a, b) => a.value.localeCompare(b.value));
+                // all others are sorted numerically
+                // in case of numerical match, no need for alphabetical fallback
+                else indexedRowList.sort((a, b) => a.value - b.value);
+
+                for (let i = 0; i < indexedRowList.length; i++) {
+                    indexedRowList[i].$row.style["grid-row-start"] = 2 + i;
+                }
+            },
         };
     </script>
 </body>
