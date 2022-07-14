@@ -189,6 +189,7 @@
             Utils: {
                 pageUnloadListener(event) {/*ITM20*/
                   event.preventDefault();
+                  // this message is not guaranteed to appear in every browser
                   return event.returnValue = 'Er du sikker? Dataen din vil ikke lagres.';
                 },
             },
