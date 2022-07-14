@@ -1,19 +1,19 @@
 Item|Name|Contents|Links
 ITM1|Title|"
 Flush (score-tracking tool)
-- [ITM1]  : Title
-- [ITM2]  : Feature List
+- [ITM1 ] : Title
+- [ITM2 ] : Feature List
 - [ITM21] : Known Issues
-- [ITM9]  : Implementation Plan
+- [ITM9 ] : Implementation Plan
 - [ITM10] : Methodology
 - [ITM12] : To-do list
 "|""
 ITM2|Feature List|"
 The user can…
 * [ITM17] : View an appropriate label for each game round
-* [ITM3]  : View all game data (ITM23) elements
+* [ITM3 ] : View all game data (ITM23) elements
 * [ITM13] : View each player's calculated player score (ITM14)
-* [ITM7]  : Inscribe a player's gains for a given round
+* [ITM7 ] : Inscribe a player's gains for a given round
 * [ITM18] : Define the players' visual sort order
 * [ITM20] : Be safeguarded against accidental loss of game data (ITM23)
             on page close/reload
