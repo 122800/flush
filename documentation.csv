@@ -15,7 +15,7 @@ The user can…
 * [ITM13] : View each player's calculated player score (ITM14)
 * [ITM7 ] : Inscribe a player's gains for a given round
 * [ITM4 ] : Add a player to the game
-* [ITM18] : Define the players' visual sort order
+* [ITM18] : Consult the players' ranking
 * [ITM20] : Be safeguarded against accidental loss of game data (ITM23)
             on page close/reload
 * [ITM11] : View additional meta-data relative to the program
@@ -170,13 +170,13 @@ The 6 standard rounds are labeled as follows:
 - `To tress en serie`
 - `En tress to serier`
 "|""
-ITM18|Feature: Player Sort Order|"
-- Players can be sorted visually (ASC only).
+ITM18|Feature: Player Ranking|"
+Player ranking is available through a visual sort operation (ASC only).
 - The sort can be applied from:
   * Player name (ITM6) (the default)
   * Player gains (ITM8) for a round
   * Player score (ITM14)
-- The availability of the sort functionality
+- The availability of the ranking functionality
   should be indicated to the user.
 "|"
 Consumes:ITM6
