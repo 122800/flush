@@ -13,6 +13,7 @@ The user can…
 * [ITM3 ] : View all game data elements
 * [ITM13] : View each player's calculated player score (ITM14)
 * [ITM7 ] : Inscribe a player's gains for a given round
+* [ITM18] : Consult the players' ranking
 * [ITM11] : View additional meta-data relative to the program
 
 Tentative features:
@@ -48,7 +49,9 @@ Details:
 ITM6|Concept: Player Name|"
 The (nick)name of a player.
 Textual.
-"|""
+"|"
+Consumed:ITM18
+"
 ITM7|Feature: Inscribing Gains per Round|"
 A player's gains (ITM8) can be inscribed for a given round.
 "|""
@@ -58,6 +61,7 @@ Non-negative integer.
 Multiples of '5' only.
 Initialized to blank '' to indicate no data.
 "|"
+Consumed:ITM18
 Encompassed:ITM13
 "
 ITM9|Implementation Plan|"
@@ -120,8 +124,6 @@ ITM11|Feature: View Program Meta-data|"
 * The version number
 "|""
 ITM12|To-do List|"
-P1
-* Implement sorting
 P2
 * Implement data persistence fail-safe
   (or: page-reload warning (prompt)
@@ -129,6 +131,9 @@ P2
 P3
 * Allow filling in from average of others
   for new-comers/quitters
+* Ranking operation (ITM18) should be aware of invalidated rank
+  when points change
+  (let go of 'sorted' indication?)
 * Control & sanitize user input
 P4
 * Configure relevant HTML 'meta' tags
@@ -145,7 +150,9 @@ Encompasses:ITM8
 "
 ITM14|Concept: Player Score|"
 The sum of all of a player's gains (ITM8).
-"|""
+"|"
+Consumed:ITM18
+"
 ITM15|Concept(Technical): Dynamic Refresh|"
 Code logic triggered by an event.
 "|""
@@ -163,4 +170,25 @@ The 6 standard rounds are labeled as follows:
 - `Tre tress`
 - `To tress en serie`
 - `En tress to serier`
+"|""
+ITM18|Feature: Player Ranking|"
+Player ranking is available through a visual sort operation (ASC only).
+- The sort can be applied from:
+  * Player name (ITM6) (the default)
+  * Player gains (ITM8) for a round
+  * Player score (ITM14)
+- The availability of the ranking functionality
+  should be indicated to the user.
+"|"
+Consumes:ITM6
+Consumes:ITM8
+Consumes:ITM14
+"
+ITM19|Link: Consume|"
+An item consumes or is consumed.
+An item processes the contents of another.
+Datatype constraints from the consumed item
+are transferred / must be handled by the consuming one.
+Updates to the consumed item
+may need to be reflected in the consuming one.
 "|""
