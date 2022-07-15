@@ -215,3 +215,6 @@ and must be protected from data loss or corruption.
 * Player names (ITM6)
 * Player gains (ITM8) for each round
 "|""
+ITM24|Feature: Edit Player Name|"
+* A player's name (ITM6) can be modified
+"|""
