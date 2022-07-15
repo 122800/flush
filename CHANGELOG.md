@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning]
   (inverse sort not available as of now)
 - Warn before page close or reload to prevent accidental data loss
 
+### Fixed
+
+- Minor visual improvements
+
 ## [1.0.0] - 2022-07-13
 
 ### Added
