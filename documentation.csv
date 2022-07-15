@@ -48,6 +48,8 @@ Details:
 ITM6|Concept: Player Name|"
 The (nick)name of a player.
 Textual.
+Trimmed.
+At least 1 character.
 "|"
 Consumed:ITM18
 "
