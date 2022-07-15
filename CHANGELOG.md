@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning]
 
 ### Added 
 
+- A button to add new players
 - Sort players alphabetically or by lowest score
   (inverse sort not available as of now)
 - Warn before page close or reload to prevent accidental data loss

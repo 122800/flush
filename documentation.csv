@@ -38,8 +38,7 @@ Game data elements (ITM23) are visible and accessible to the user.
 "|""
 ITM4|Feature: Add Player|"
 Details:
-* A means of adding a player is visible
-* Player name (ITM6) can be chosen
+* A means of adding a new player is visible
 "|""
 ITM5|Feature: Remove Player|"
 Details:
