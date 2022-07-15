@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning]
 ### Added 
 
 - Ability to sort users alphabetically or by lowest score
+- Sort players alphabetically or by lowest score
   (inverse sort not available as of now)
 - Warn before page close or reload to prevent accidental data loss
 
