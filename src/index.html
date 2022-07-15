@@ -241,7 +241,18 @@
                     indexedRowList[i].$row.style["grid-row-start"] = 2 + i;
                 }
             },
+
+            Utils: {
+                pageUnloadListener(event) {/*ITM20*/
+                  event.preventDefault();
+                  // this message is not guaranteed to appear in every browser
+                  return event.returnValue = 'Er du sikker? Dataen din vil ikke lagres.';
+                },
+            },
         };
+
+        // Init
+        window.addEventListener('beforeunload', Flush.Utils.pageUnloadListener);/*ITM20*/
     </script>
 </body>
 </html>
