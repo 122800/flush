@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning]
 
 - Ability to sort users alphabetically or by lowest score
   (inverse sort not available as of now)
+- Modify player names
 - Warn before page close or reload to prevent accidental data loss
 
 ## [1.0.0] - 2022-07-13
