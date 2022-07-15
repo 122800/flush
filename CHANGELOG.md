@@ -20,5 +20,6 @@ and this project adheres to [Semantic Versioning]
 
 ### Added
 
-- Score-tracking table (with 8 preset users)
-- Automatic score calculation
+- Score-tracking table over 6 rounds of Flush
+- A fixed set of 8 players
+- Automatic score calculation as the game progresses
