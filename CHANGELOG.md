@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning]
   (inverse sort not available as of now)
 - Warn before page close or reload to prevent accidental data loss
 
+### Removed
+
+- The fixed set of starting players is reduced to 4 unnamed players
+
 ### Fixed
 
 - Minor visual improvements
