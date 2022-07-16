@@ -17,6 +17,17 @@
         header {
             margin: 0.5em;
         }
+        
+        * {/*ITM26*/
+            /* because 'input' elements don't seem to scale otherwise */
+            font-size: inherit;
+        }
+        body {/*ITM26*/
+            font-size: 200%;
+        }
+        input[name="ITM6"] {/*ITM26*/
+            font-size: 0.6em;
+        }
 
         h1 {/*ITM11*/
             margin: 0;
@@ -35,7 +46,8 @@
         #game tbody {/*ITM18*/
             display: grid;
             min-width: 100%;
-            grid-template-columns: repeat(7, 3fr) 1fr;
+            /* ITM26: a bit more space granted to the first column */
+            grid-template-columns: 5fr repeat(6, 3fr) 1fr;
         }
         #game tr {/*ITM18*/
             display: contents;
@@ -175,7 +187,7 @@
                 let $gameTable = Flush.$.game.children[0];// game > tbody
                 let playerNum = ++Flush.Utils.var.playerNumber;
                 let htmlTemplate = `\
-<td><!-- ITM6 --><input form="ITM8-gains-collection-p${playerNum}" value="Player${playerNum}" minlength="1"><!-- ITM24 --></td>
+<td><!-- ITM6 --><input form="ITM8-gains-collection-p${playerNum}" name="ITM6" value="Player${playerNum}" minlength="1"><!-- ITM24 --></td>
 <td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
 <td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
 <td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>

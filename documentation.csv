@@ -10,6 +10,7 @@ Flush (score-tracking tool)
 "|""
 ITM2|Feature List|"
 The user can…
+* [ITM26] : Comfortably view all visible content from any device
 * [ITM17] : View an appropriate label for each game round
 * [ITM25] : Benefit from an initial set of players for convenience
 * [ITM3 ] : View all game data (ITM23) elements
@@ -223,4 +224,10 @@ ITM24|Feature: Edit Player Name|"
 ITM25|Feature: Initial Player Loadout|"
 An initial set of 4 (unnamed) players are created
 automatically on loading, for convenience.
+"|""
+ITM26|Viewing Comfort of Visible Content|"
+Visible content is sized comfortably for use on all devices.
+With minimal need for manual resizing, the user can:
+* Comfortably use all functionality
+* Show/display the game progress (ITM3) to others nearby
 "|""
