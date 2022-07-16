@@ -1,26 +1,30 @@
 Item|Name|Contents|Links
 ITM1|Title|"
 Flush (score-tracking tool)
-- [ITM1]: Title
-- [ITM2]: Feature List
-- [ITM9]: Implementation Plan
-- [ITM10]: Methodology
-- [ITM12]: To-do list
+- [ITM1 ] : Title Section
+- [ITM2 ] : Feature List
+- [ITM9 ] : Implementation Plan
+- [ITM10] : Methodology
+- [ITM12] : To-do list
 "|""
 ITM2|Feature List|"
-* [ITM17] The game rounds are labeled
-* [ITM3] View all game data elements
-* [ITM13] Player score is calculated automatically & displayed
-* [ITM4] Add a player to the game
-* [ITM5] Remove a player from the game
-* [ITM7] Inscribe a player's gains in a given round
-* [ITM11] Additional meta-data is available
+The user can…
+* [ITM17] : View an appropriate label for each game round
+* [ITM3 ] : View all game data elements
+* [ITM13] : View each player's calculated player score (ITM14)
+* [ITM7 ] : Inscribe a player's gains for a given round
+* [ITM11] : View additional meta-data relative to the program
 
 Tentative features:
 
-* Sum of scores can be viewed up to an arbitrary round
-* Export to text format
-* All features are mobile-friendly/first
+* [ITM4] Add a player to the game
+* [ITM5] Remove a player from the game
+* View the scores (ITM14) up to an arbitrary round (mini-graph?)
+* Export game data to text format
+* Benefit from all features with mobile-friendly/first considerations
+* Have access to a reminder of the rules for consultation
+* Virtualization of gameplay
+* A little (star, trophy?) icon to highlight each round's winner
 
 TODO: split feature description
 into 'functional need',
@@ -32,12 +36,12 @@ Information displayed:
 * Player names (ITM6)
 * Player gains (ITM8) for each round
 "|""
-ITM4|Feature: Add player|"
+ITM4|Feature: Add Player|"
 Details:
 * A means of adding a player is visible
 * Player name can be chosen (ITM6)
 "|""
-ITM5|Feature: Remove player|"
+ITM5|Feature: Remove Player|"
 Details:
 * A means of deleting a player is visible
 "|""
@@ -45,7 +49,7 @@ ITM6|Concept: Player Name|"
 The (nick)name of a player.
 Textual.
 "|""
-ITM7|Feature: Inscribe score|"
+ITM7|Feature: Inscribing Gains per Round|"
 A player's gains (ITM8) can be inscribed for a given round.
 "|""
 ITM8|Concept: Player Gains (per round)|"
@@ -110,7 +114,7 @@ For simplicity we may choose to combine all assets
 in a single file,
 to begin with.
 "|""
-ITM11|Additional Meta-data|"
+ITM11|Feature: View Program Meta-data|"
 * The tool's name: `Mellbye Flush`
 "|""
 ITM12|To-do List|"
@@ -123,6 +127,7 @@ P2
 P3
 * Allow filling in from average of others
   for new-comers/quitters
+* Control & sanitize user input
 P4
 * Configure relevant HTML 'meta' tags
   https://www.w3schools.com/tags/tag_meta.asp
@@ -130,7 +135,7 @@ P4
 * Configure relevant HTML 'global' attributes
   https://www.w3schools.com/tags/ref_standardattributes.asp
 "|""
-ITM13|Player Score Calculation|"
+ITM13|Feature: Player Score Calculation|"
 Each player's score (ITM14) is displayed.
 The scores (ITM14) are updated automatically (ITM15).
 "|"
@@ -148,7 +153,7 @@ An item relies/depends on the scope defined by another.
 Updates to the encompassed item must be reflected
 in the encompassing one.
 "|""
-ITM17|Feature: Rounds Labeled|"
+ITM17|Feature: Game Round Labels|"
 The 6 standard rounds are labeled as follows:
 - `To tress`
 - `En tress en serie`
