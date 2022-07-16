@@ -15,6 +15,7 @@ The user can…
 * [ITM13] : View each player's calculated player score (ITM14)
 * [ITM7 ] : Inscribe a player's gains for a given round
 * [ITM4 ] : Add a player to the game
+* [ITM24] : Edit a player's name
 * [ITM18] : Consult the players' ranking
 * [ITM20] : Be safeguarded against accidental loss of game data (ITM23)
             on page close/reload
@@ -48,6 +49,8 @@ Details:
 ITM6|Concept: Player Name|"
 The (nick)name of a player.
 Textual.
+Trimmed.
+At least 1 character.
 "|"
 Consumed:ITM18
 "
@@ -212,4 +215,7 @@ These cannot be regenerated or calculated automatically
 and must be protected from data loss or corruption.
 * Player names (ITM6)
 * Player gains (ITM8) for each round
+"|""
+ITM24|Feature: Edit Player Name|"
+* A player's name (ITM6) can be modified
 "|""
