@@ -14,6 +14,7 @@ The user can…
 * [ITM3 ] : View all game data (ITM23) elements
 * [ITM13] : View each player's calculated player score (ITM14)
 * [ITM7 ] : Inscribe a player's gains for a given round
+* [ITM4 ] : Add a player to the game
 * [ITM18] : Consult the players' ranking
 * [ITM20] : Be safeguarded against accidental loss of game data (ITM23)
             on page close/reload
@@ -21,8 +22,6 @@ The user can…
 
 Tentative features:
 
-* [ITM4] Add a player to the game
-* [ITM5] Remove a player from the game
 * View the scores (ITM14) up to an arbitrary round (mini-graph?)
 * Export game data (ITM23) to text format
 * Benefit from all features with mobile-friendly/first considerations
@@ -40,8 +39,7 @@ Game data elements (ITM23) are visible and accessible to the user.
 "|""
 ITM4|Feature: Add Player|"
 Details:
-* A means of adding a player is visible
-* Player name can be chosen (ITM6)
+* A means of adding a new player is visible
 "|""
 ITM5|Feature: Remove Player|"
 Details:
@@ -125,6 +123,8 @@ ITM11|Feature: View Program Meta-data|"
 * The version number
 "|""
 ITM12|To-do List|"
+P1
+* [ITM5] Remove a player from the game
 P3
 * Allow filling in from average of others
   for new-comers/quitters

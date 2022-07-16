@@ -92,98 +92,103 @@
         <p id="version">v1.0.0</p><!-- ITM11 -->
     </header>
 
-    <table id="game"><!-- ITM3 -->
-        <tr>
-            <th onclick="Flush.sortTable(0)" class="sort-active">Spiller</th>
-            <th onclick="Flush.sortTable(1)">To tress</th><!-- ITM17 -->
-            <th onclick="Flush.sortTable(2)">En tress / en serie</th><!-- ITM17 -->
-            <th onclick="Flush.sortTable(3)">To serier</th><!-- ITM17 -->
-            <th onclick="Flush.sortTable(4)">Tre tress</th><!-- ITM17 -->
-            <th onclick="Flush.sortTable(5)">To tress / en serie</th><!-- ITM17 -->
-            <th onclick="Flush.sortTable(6)">En tress / to serier</th><!-- ITM17 -->
-            <th onclick="Flush.sortTable(7)">Score</th><!-- ITM14 -->
-        </tr>
-        <tr>
-            <td><input form="ITM8-gains-collection-p1" value="Emelie" readonly></td><!-- ITM6 -->
-            <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><form id="ITM8-gains-collection-p1"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
-        </tr>
-        <tr>
-            <td><input form="ITM8-gains-collection-p2" value="Ingrid" readonly></td><!-- ITM6 -->
-            <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><form id="ITM8-gains-collection-p2"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
-        </tr>
-        <tr>
-            <td><input form="ITM8-gains-collection-p3" value="Lennart" readonly></td><!-- ITM6 -->
-            <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><form id="ITM8-gains-collection-p3"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
-        </tr>
-        <tr>
-            <td><input form="ITM8-gains-collection-p4" value="Leovi" readonly></td><!-- ITM6 -->
-            <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><form id="ITM8-gains-collection-p4"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
-        </tr>
-        <tr>
-            <td><input form="ITM8-gains-collection-p5" value="Marit" readonly></td><!-- ITM6 -->
-            <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><form id="ITM8-gains-collection-p5"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
-        </tr>
-        <tr>
-            <td><input form="ITM8-gains-collection-p6" value="Mette" readonly></td><!-- ITM6 -->
-            <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><form id="ITM8-gains-collection-p6"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
-        </tr>
-        <tr>
-            <td><input form="ITM8-gains-collection-p7" value="Rein" readonly></td><!-- ITM6 -->
-            <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><form id="ITM8-gains-collection-p7"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
-        </tr>
-        <tr>
-            <td><input form="ITM8-gains-collection-p8" value="Tom Erik" readonly></td><!-- ITM6 -->
-            <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-            <td><form id="ITM8-gains-collection-p8"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
-        </tr>
-    </table>
+    <section>
+        <table id="game"><!-- ITM3 -->
+            <tr>
+                <th onclick="Flush.sortTable(0)" class="sort-active">Spiller</th>
+                <th onclick="Flush.sortTable(1)">To tress</th><!-- ITM17 -->
+                <th onclick="Flush.sortTable(2)">En tress / en serie</th><!-- ITM17 -->
+                <th onclick="Flush.sortTable(3)">To serier</th><!-- ITM17 -->
+                <th onclick="Flush.sortTable(4)">Tre tress</th><!-- ITM17 -->
+                <th onclick="Flush.sortTable(5)">To tress / en serie</th><!-- ITM17 -->
+                <th onclick="Flush.sortTable(6)">En tress / to serier</th><!-- ITM17 -->
+                <th onclick="Flush.sortTable(7)">Score</th><!-- ITM14 -->
+            </tr>
+            <tr>
+                <td><input form="ITM8-gains-collection-p1" value="Emelie" readonly></td><!-- ITM6 -->
+                <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p1" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><form id="ITM8-gains-collection-p1"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
+            </tr>
+            <tr>
+                <td><input form="ITM8-gains-collection-p2" value="Ingrid" readonly></td><!-- ITM6 -->
+                <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p2" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><form id="ITM8-gains-collection-p2"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
+            </tr>
+            <tr>
+                <td><input form="ITM8-gains-collection-p3" value="Lennart" readonly></td><!-- ITM6 -->
+                <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p3" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><form id="ITM8-gains-collection-p3"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
+            </tr>
+            <tr>
+                <td><input form="ITM8-gains-collection-p4" value="Leovi" readonly></td><!-- ITM6 -->
+                <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p4" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><form id="ITM8-gains-collection-p4"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
+            </tr>
+            <tr>
+                <td><input form="ITM8-gains-collection-p5" value="Marit" readonly></td><!-- ITM6 -->
+                <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p5" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><form id="ITM8-gains-collection-p5"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
+            </tr>
+            <tr>
+                <td><input form="ITM8-gains-collection-p6" value="Mette" readonly></td><!-- ITM6 -->
+                <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p6" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><form id="ITM8-gains-collection-p6"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
+            </tr>
+            <tr>
+                <td><input form="ITM8-gains-collection-p7" value="Rein" readonly></td><!-- ITM6 -->
+                <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p7" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><form id="ITM8-gains-collection-p7"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
+            </tr>
+            <tr>
+                <td><input form="ITM8-gains-collection-p8" value="Tom Erik" readonly></td><!-- ITM6 -->
+                <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><input form="ITM8-gains-collection-p8" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+                <td><form id="ITM8-gains-collection-p8"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>
+            </tr>
+        </table>
+        <div>
+            <button type="button" onclick="Flush.addPlayer()"><!-- ITM4 -->+</button>
+        </div>
+    </section>
 
     <script type="text/javascript">
         "use strict";
@@ -191,10 +196,14 @@
         const Flush = {
 
             $: {
+                game: document.getElementById("game"),
                 headers: document.querySelectorAll("#game th"),
-                // get rows except for the first
-                rows: document.querySelectorAll("#game tr + tr"),
-                forms: document.querySelectorAll("#game form"),
+
+                dynamic: {
+                    // get rows except for the first
+                    rows() { return document.querySelectorAll("#game tr + tr") },
+                    forms() { return document.querySelectorAll("#game form") },
+                },
             },
 
             calcFormScore(form) {/*ITM13*/
@@ -209,8 +218,8 @@
 
             sortTable(column) {/*ITM18*/
                 let $headers = Flush.$.headers;
-                let $rows = Flush.$.rows;
-                let $forms = this.$.forms;
+                let $rows = Flush.$.dynamic.rows();
+                let $forms = this.$.dynamic.forms();
 
                 // set/unset css class on headers
                 for (let i = 0; i < $headers.length; i++) {
@@ -242,11 +251,34 @@
                 }
             },
 
+            addPlayer() {/*ITM4*/
+                let $gameTable = Flush.$.game.children[0];// game > tbody
+                let playerNum = ++Flush.Utils.var.playerNumber;
+                let htmlTemplate = `\
+<td><input form="ITM8-gains-collection-p${playerNum}" value="Player${playerNum}" readonly><!-- ITM24 --></td><!-- ITM6 -->
+<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
+<td><form id="ITM8-gains-collection-p${playerNum}"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>`
+
+                let $rowNode = document.createElement("tr");
+                $rowNode.innerHTML = htmlTemplate;
+                $gameTable.appendChild($rowNode);
+            },
+
             Utils: {
                 pageUnloadListener(event) {/*ITM20*/
                   event.preventDefault();
                   // this message is not guaranteed to appear in every browser
                   return event.returnValue = 'Er du sikker? Dataen din vil ikke lagres.';
+                },
+
+                // arbitrary variable storage
+                var: {
+                    playerNumber: 0,
                 },
             },
         };
