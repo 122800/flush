@@ -2,6 +2,7 @@ Item|Name|Contents|Links
 ITM1|Title|"
 Flush (score-tracking tool)
 - [ITM1 ] : Title Section
+- [ITM27] : About this Document
 - [ITM2 ] : Feature List
 - [ITM21] : Known Issues
 - [ITM9 ] : Implementation Plan
@@ -230,4 +231,8 @@ Visible content is sized comfortably for use on all devices.
 With minimal need for manual resizing, the user can:
 * Comfortably use all functionality
 * Show/display the game progress (ITM3) to others nearby
+"|""
+ITM27|About this Document|"
+This section not yet fully documented.
+Types of links: [ITM16], [ITM19].
 "|""
