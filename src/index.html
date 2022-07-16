@@ -88,21 +88,21 @@
 <body>
 
     <header>
-        <h1>Mellbye Flush</h1><!-- ITM11 -->
-        <p id="version">v1.0.0</p><!-- ITM11 -->
+        <h1><!-- ITM11 -->Mellbye Flush</h1>
+        <p id="version"><!-- ITM11 -->v1.0.0</p>
     </header>
 
     <section>
         <table id="game"><!-- ITM3 -->
             <tr>
                 <th onclick="Flush.sortTable(0)" class="sort-active">Spiller</th>
-                <th onclick="Flush.sortTable(1)">2&nbsp;tress</th><!-- ITM17 -->
-                <th onclick="Flush.sortTable(2)">1&nbsp;tress <br> 1&nbsp;serie</th><!-- ITM17 -->
-                <th onclick="Flush.sortTable(3)">2&nbsp;serier</th><!-- ITM17 -->
-                <th onclick="Flush.sortTable(4)">3&nbsp;tress</th><!-- ITM17 -->
-                <th onclick="Flush.sortTable(5)">2&nbsp;tress <br> 1&nbsp;serie</th><!-- ITM17 -->
-                <th onclick="Flush.sortTable(6)">1&nbsp;tress <br> 2&nbsp;serier</th><!-- ITM17 -->
-                <th onclick="Flush.sortTable(7)">Score</th><!-- ITM14 -->
+                <th onclick="Flush.sortTable(1)"><!-- ITM17 -->2&nbsp;tress</th>
+                <th onclick="Flush.sortTable(2)"><!-- ITM17 -->1&nbsp;tress <br> 1&nbsp;serie</th>
+                <th onclick="Flush.sortTable(3)"><!-- ITM17 -->2&nbsp;serier</th>
+                <th onclick="Flush.sortTable(4)"><!-- ITM17 -->3&nbsp;tress</th>
+                <th onclick="Flush.sortTable(5)"><!-- ITM17 -->2&nbsp;tress <br> 1&nbsp;serie</th>
+                <th onclick="Flush.sortTable(6)"><!-- ITM17 -->1&nbsp;tress <br> 2&nbsp;serier</th>
+                <th onclick="Flush.sortTable(7)"><!-- ITM14 -->Score</th>
             </tr>
         </table>
         <div>
@@ -175,14 +175,14 @@
                 let $gameTable = Flush.$.game.children[0];// game > tbody
                 let playerNum = ++Flush.Utils.var.playerNumber;
                 let htmlTemplate = `\
-<td><input form="ITM8-gains-collection-p${playerNum}" value="Player${playerNum}" minlength="1"><!-- ITM24 --></td><!-- ITM6 -->
-<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-<td><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td><!-- ITM8 -->
-<td><form id="ITM8-gains-collection-p${playerNum}"><!-- ITM13 --><output name="ITM13">0</output><!-- ITM14 --></form></td>`
+<td><!-- ITM6 --><input form="ITM8-gains-collection-p${playerNum}" value="Player${playerNum}" minlength="1"><!-- ITM24 --></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM14 --><form id="ITM8-gains-collection-p${playerNum}"><!-- ITM13 --><output name="ITM13">0</output></form></td>`
 
                 let $rowNode = document.createElement("tr");
                 $rowNode.innerHTML = htmlTemplate;
