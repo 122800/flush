@@ -11,7 +11,7 @@ Flush (score-tracking tool)
 ITM2|Feature List|"
 The user can…
 * [ITM17] : View an appropriate label for each game round
-* [ITM3 ] : View all game data elements
+* [ITM3 ] : View all game data (ITM23) elements
 * [ITM13] : View each player's calculated player score (ITM14)
 * [ITM7 ] : Inscribe a player's gains for a given round
 * [ITM18] : Consult the players' ranking
@@ -24,7 +24,7 @@ Tentative features:
 * [ITM4] Add a player to the game
 * [ITM5] Remove a player from the game
 * View the scores (ITM14) up to an arbitrary round (mini-graph?)
-* Export game data to text format
+* Export game data (ITM23) to text format
 * Benefit from all features with mobile-friendly/first considerations
 * Have access to a reminder of the rules for consultation
 * Virtualization of gameplay
@@ -35,10 +35,8 @@ into 'functional need',
 'abstract model',
 and 'technical implementation'
 "|""
-ITM3|Feature: View game data|"
-Information displayed:
-* Player names (ITM6)
-* Player gains (ITM8) for each round
+ITM3|Feature: View Game Data|"
+Game data elements (ITM23) are visible and accessible to the user.
 "|""
 ITM4|Feature: Add Player|"
 Details:
@@ -207,4 +205,11 @@ with the bfcache browser mechanism,
 as documented in [1], [2].
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event
 [2]: https://web.dev/bfcache/
+"|""
+ITM23|Concept: Game Data|"
+Game data-points provided by the user.
+These cannot be regenerated or calculated automatically
+and must be protected from data loss or corruption.
+* Player names (ITM6)
+* Player gains (ITM8) for each round
 "|""
