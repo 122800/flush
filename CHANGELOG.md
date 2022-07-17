@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog]
 and this project adheres to [Semantic Versioning]
 (https://semver.org/spec/v2.0.0.html).
 
-## [1.1.0-beta] - 2022-07-16
+## [1.1.0-beta.1] - 2022-07-17
 
 ### Added 
 
