@@ -273,3 +273,151 @@ ITM31|Issue: Accessibility|"
 No particular consideration has yet been taken
 to ensure adequate accessibility for users requiring it.
 "|""
+Item|Name|Contents
+IMPORTED0|ZeldaDoc|0.1.0
+IMPORTED1|Introduction|"
+Welcome to the 'Mellbye Flush' project.
+The purpose of this document is to track all information
+related to the development of this project.
+This document is intended to be entirely self-descriptive,
+and the unique and complete source of information
+regarding this project.
+
+The information in this document is organised
+as a collection of items,
+each item being identified by a unique number
+denoted by the prefix 'IMPORTED'.
+References to other items are made
+by wrapping the identifier in square brackets.
+For example: [IMPORTED1].
+
+The tool you are using to view this document
+may present hyperlinks to referenced items;
+or if you are viewing this as plain text,
+you may run a search through the document
+to find the item in question,
+alongside any other references to it.
+
+Read [IMPORTED2] for a guide to using this document.
+For all other information,
+go to the table of contents in [IMPORTED3].
+"
+IMPORTED2|Document Guide|"
+This guide will explain the concepts behind this document,
+as well as how to read and understand its structure.
+It will not explain elements pertaining to the project itself.
+If that is what you are looking for,
+go to the table of contents ([IMPORTED3]).
+
+Visit the following sections for guides
+to the different aspects of the document:
+* [IMPORTED8]: Item Structure
+* [IMPORTED4]: Segment Definitions
+* [IMPORTED9]: Rationale
+"
+IMPORTED3|Table of Contents|"
+- [IMPORTED1]: Introduction
+- [IMPORTED2]: Document Guide
+- [IMPORTED3]: Table of Contents
+- [IMPORTED10]: Functional Description
+- [IMPORTED11]: Feature List
+"
+IMPORTED4|Segment Definitions|"
+- Item: [IMPORTED5]
+- Name: [IMPORTED6]
+- Contents: [IMPORTED7]
+"
+IMPORTED5|Segment Definition: Item|"
+The item's numerical ID.
+Immutable.
+The number is prefixed by the letters 'IMPORTED'.
+Zeroes ('0') may be added
+to pad the number to a certain length,
+without changing the validity of the ID
+(e.g. 'IMPORTED005').
+"
+IMPORTED6|Segment Definition: Name|"
+The short primary title
+or human-friendly identifier
+of the item.
+Can be subject to change;
+only the item's ID ([IMPORTED5]) must be used
+to durably reference an item.
+"
+IMPORTED7|Segment Definition: Contents|"
+The primary contents of the item,
+intended to be read by the user.
+The contents may vary greatly from item to item.
+"
+IMPORTED8|Item Structure|"
+Items are composed of segments,
+and all data or meta-data pertaining to the item
+is contained in these segments.
+This document defines several types of segments,
+and these are shared by every item in the document.
+
+In a flat data representation,
+this document could be seen as a table
+in which every item is a line,
+and segments would be the columns
+into which data is distributed.
+
+Save for the very first item,
+the numerical ID
+or the order in which items are defined
+or positioned in the document
+is not important.
+It is therefore better to navigate by following links
+than by reading the items 'in order' numerically
+or from top to bottom.
+
+The reference for these segments and their definitions
+can be found in [IMPORTED4].
+"
+IMPORTED9|Rationale|"
+TODO: explain how no orphans
+"
+IMPORTED10|Functional Description|"
+This tool's function is to allow a user
+to perform an automated backup of arbitrary content
+hosted in other locations,
+with the possibility of tracking incremental updates
+to the backup.
+"
+IMPORTED11|Feature List|"
+This item details the complete list of features
+provided to the user.
+Every command the user may give,
+and every behaviour that can be expected from the tool,
+should have documentation accessible through this item.
+* [IMPORTED15] Query state of backup
+* [IMPORTED12] Launch backup
+* [IMPORTED13] Access backed-up files
+"
+IMPORTED12|Feature: Launch backup|"
+The user is able to launch the 'backup' command.
+This feature includes the following sub-features:
+* [IMPORTED14] Monitor operation progress
+"
+IMPORTED13|Feature: Access backed-up files|"
+The user can access and view the backed-up data
+in a human-readable format.
+"
+IMPORTED14|Sub-feature: Monitor operation progress|"
+The user is shown the progression
+of a long-running operation.
+The user is notified
+of important life-cycle events of the operation:
+- Started
+- Paused
+- Resumed
+- Stopped
+"
+IMPORTED15|Feature: Query state of backup|"
+The user can access an overview
+of the current state of the backup.
+The following information is provided:
+* Timestamp of last backup
+* Current size of backup
+* Number of items backed up
+"
