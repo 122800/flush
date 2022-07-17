@@ -55,6 +55,7 @@ ITM6|Concept: Player Name|"
 The (nick)name of a player.
 Textual.
 Trimmed.
+Globally unique.
 At least 1 character.
 "|"
 Consumed:ITM18
@@ -147,6 +148,7 @@ FIXME:
 * Improve page-reload warning (ITM20) behaviour
   when there are no unsaved changes
 * Control & sanitize user input
+* ITM18: fallback on alphabetical sort on equal points ranking
 P4
 * Configure relevant HTML 'meta' tags
   https://www.w3schools.com/tags/tag_meta.asp
@@ -188,6 +190,8 @@ Player ranking is available through a visual sort operation (ASC only).
 - The sort can be applied from:
   * Player name (ITM6) (the default)
   * Player gains (ITM8) for a round
+    * In case of equal gains,
+      unspecified sort order is acceptable.
   * Player score (ITM14)
 - The availability of the ranking functionality
   should be indicated to the user.
