@@ -74,10 +74,8 @@ Tentative features:
 * Virtualization of gameplay
 * A little (star, trophy?) icon to highlight each round's winner
 
-TODO: split feature description
-into 'functional need',
-'abstract model',
-and 'technical implementation'
+TODO: split feature description into 'functional need',
+'abstract model', and 'technical implementation'
 "|""
 ITM3|Feature: View Game Data|"
 Game data elements (ITM23) are visible and accessible to the user.
