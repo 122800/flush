@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- ITM26 -->
     <title>Mellbye Flush</title><!-- ITM11 -->
 
     <style>
@@ -71,9 +71,6 @@
         #game td, #game th {
             border: 1.3px solid #023654;
         }
-        #game td:last-child {
-            font-weight: bold;
-        }
 
         #game tr:nth-child(even) td { background-color: #F2F2F2; }
         #game tr:nth-child(odd) td { background-color: #FFFFFF; }
@@ -86,13 +83,14 @@
             color: #FFF;
         }
 
-        #game input {
+        #game input {/*ITM3*/
             background: transparent;
             border: none;
             width: 100%;
             height: 100%;
         }
-        #game form {
+        #game form {/*ITM13*/
+            font-weight: bold;
             text-align: center;
         }
 
@@ -111,7 +109,8 @@
     <section>
         <table id="game"><!-- ITM3 -->
             <tr>
-                <th onclick="Flush.sortTable(0)" class="sort-active">Spiller</th>
+                <!-- ITM18: 'sort-active' is set by default on the 'player name' column -->
+                <th onclick="Flush.sortTable(0)" class="sort-active"><!-- ITM3 -->Spiller</th>
                 <th onclick="Flush.sortTable(1)"><!-- ITM17 -->2&nbsp;tress</th>
                 <th onclick="Flush.sortTable(2)"><!-- ITM17 -->1&nbsp;tress <br> 1&nbsp;serie</th>
                 <th onclick="Flush.sortTable(3)"><!-- ITM17 -->2&nbsp;serier</th>
@@ -128,6 +127,7 @@
 
     <script type="text/javascript">
         "use strict";
+        // The availability of JavaScript is verified in ITM30
 
         const Flush = {
 
@@ -165,6 +165,7 @@
                     else $headers[i].classList.remove("sort-active");
                 }
 
+                // extract the contents of each field into an array
                 let i = 0;
                 let indexedRowList = Array.from($forms).reduce((l, $form) => {
                     l.push({
@@ -174,29 +175,32 @@
                     return l;
                 }, []);
 
-                // first column is alphabetical
+                // first column is alphabetical (ITM6)
                 if(column == 0) indexedRowList.sort((a, b) => a.value.localeCompare(b.value));
-                // all others are sorted numerically
-                // in case of numerical match, no need for alphabetical fallback
+                // all others are sorted numerically (ITM8)
+                // in case of numerical match, no need for alphabetical fallback (ITM18)
                 else indexedRowList.sort((a, b) => a.value - b.value);
 
+                // alter each $row's css to reorder it in the table
                 for (let i = 0; i < indexedRowList.length; i++) {
+                    // +2: +1 for header, +1 for array index '0'
                     indexedRowList[i].$row.style["grid-row-start"] = 2 + i;
                 }
             },
 
             addPlayer() {/*ITM4*/
-                let $gameTable = Flush.$.game.children[0];// game > tbody
+                // game > tbody
+                let $gameTable = Flush.$.game.children[0];
                 let playerNum = ++Flush.Utils.var.playerNumber;
                 let htmlTemplate = `\
-<td><!-- ITM6 --><input form="ITM8-gains-collection-p${playerNum}" name="ITM6" value="Player${playerNum}" minlength="1"><!-- ITM24 --></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
-<td><!-- ITM14 --><form id="ITM8-gains-collection-p${playerNum}"><!-- ITM13 --><output name="ITM13">0</output></form></td>`
+<td><!-- ITM3/ITM6 --><input form="ITM8-gains-collection-p${playerNum}" name="ITM6" value="Player${playerNum}" minlength="1"><!-- ITM24 --></td>
+<td><!-- ITM3/ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM3/ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM3/ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM3/ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM3/ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM3/ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM13/ITM14 --><form id="ITM8-gains-collection-p${playerNum}"><!-- ITM13 --><output name="ITM13">0</output></form></td>`
 
                 let $rowNode = document.createElement("tr");
                 $rowNode.innerHTML = htmlTemplate;
