@@ -1,4 +1,5 @@
 Item|Name|Contents|Links
+ITM0|ZeldaDoc|0.1.0|""
 ITM1|Title|"
 Flush (score-tracking tool)
 - [ITM1 ] : Title Section
@@ -273,8 +274,6 @@ ITM31|Issue: Accessibility|"
 No particular consideration has yet been taken
 to ensure adequate accessibility for users requiring it.
 "|""
-Item|Name|Contents
-ITM0|ZeldaDoc|0.1.0|""
 IMPORTED1|Introduction|"
 Welcome to the 'Mellbye Flush' project.
 The purpose of this document is to track all information
