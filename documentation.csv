@@ -33,7 +33,6 @@ ITM2|Table of Contents|"
 - [IMPORTED2]: Document Guide
 - [ITM27] : About this Document
 - [IMPORTED10]: Functional Description
-- [IMPORTED11]: Feature List
 - [LEGACY2 ] : Feature List
 - [ITM21] : Known Issues
 - [ITM28] : Project Procedures
@@ -42,7 +41,16 @@ ITM2|Table of Contents|"
 - [ITM12] : To-do list
 "|""
 LEGACY2|Feature List|"
-The user can…
+This item details the complete list of features
+provided to the user.
+Every command that the user may give,
+as well as every behaviour that can be expected
+from the tool,
+must have documentation accessible through this item.
+To encourage a user-centric design,
+the features in this list are expressed so as to fit the form
+« The user can… »
+
 * [ITM26] : Comfortably view all visible content from any device
 * [ITM17] : View an appropriate label for each game round
 * [ITM25] : Benefit from an initial set of players for convenience
@@ -70,16 +78,6 @@ TODO: split feature description
 into 'functional need',
 'abstract model',
 and 'technical implementation'
-"|""
-IMPORTED11|Feature List|"
-This item details the complete list of features
-provided to the user.
-Every command the user may give,
-and every behaviour that can be expected from the tool,
-should have documentation accessible through this item.
-* [IMPORTED15] Query state of backup
-* [IMPORTED12] Launch backup
-* [IMPORTED13] Access backed-up files
 "|""
 ITM3|Feature: View Game Data|"
 Game data elements (ITM23) are visible and accessible to the user.
