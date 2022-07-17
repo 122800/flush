@@ -168,11 +168,9 @@
                 let i = 0;
                 let indexedRowList = Array.from($forms).reduce((l, $form) => {
                     l.push({
-                        index: i,
                         value: $form.elements[column].value,
-                        $row: $rows[i],
+                        $row: $rows[i++],
                     });
-                    i++;
                     return l;
                 }, []);
 
