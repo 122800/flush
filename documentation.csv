@@ -134,6 +134,11 @@ ITM12|To-do List|"
 P1
 * [ITM5] Remove a player from the game
 P3
+FIXME:
+  highlight when less than 50?
+  highlight upcoming column?
+  saving/suggesting usernames?
+
 * Allow filling in from average of others
   for new-comers/quitters
 * Ranking operation (ITM18) should be aware of invalidated rank
