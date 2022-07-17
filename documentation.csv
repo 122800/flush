@@ -233,7 +233,7 @@ ITM25|Feature: Initial Player Loadout|"
 An initial set of 4 (unnamed) players are created
 automatically on loading, for convenience.
 "|""
-ITM26|Viewing Comfort of Visible Content|"
+ITM26|Feature: Viewing Comfort of Visible Content|"
 Visible content is sized comfortably for use on all devices.
 With minimal need for manual resizing, the user can:
 * Comfortably use all functionality
