@@ -285,21 +285,21 @@ regarding this project.
 The information in this document is organised
 as a collection of items,
 each item being identified by a unique number
-denoted by the prefix 'IMPORTED'.
+denoted by the prefix 'ITM'.
 References to other items are made
 by wrapping the identifier in square brackets.
-For example: [IMPORTED1].
+For example: [ITM1].
 
 The tool you are using to view this document
 may present hyperlinks to referenced items;
 or if you are viewing this as plain text,
-you may run a search through the document
-to find the item in question,
-alongside any other references to it.
+you may locate an item
+or any other mentions of it
+by running a search through the document.
 
-Read [IMPORTED2] for a guide to using this document.
+Read [ITM2] for a guide to using this document.
 For all other information,
-go to the table of contents in [IMPORTED3].
+go to the table of contents in [ITM3].
 "|""
 IMPORTED2|Document Guide|"
 This guide will explain the concepts behind this document,
