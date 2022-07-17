@@ -211,6 +211,7 @@ by closing or reloading the page.
 "|""
 ITM21|Known Issues|"
 * [ITM22] BFCache Incompatibility
+* [ITM31] Accessibility
 "|""
 ITM22|Issue: BFCache Incompatibility|"
 Use of the 'beforeunload event' results in incompatibility
@@ -263,4 +264,8 @@ In case of incompatibility with the device,
 a warning is displayed to clarify the situation.
 The following situations are handled:
 * Absence of JavaScript
+"|""
+ITM31|Issue: Accessibility|"
+No particular consideration has yet been taken
+to ensure adequate accessibility for users requiring it.
 "|""
