@@ -24,6 +24,7 @@ The user can…
 * [ITM20] : Be safeguarded against accidental loss of game data (ITM23)
             on page close/reload
 * [ITM11] : View additional meta-data relative to the program
+* [ITM30] : See a warning in case of incompatibility with the device
 
 Tentative features:
 
@@ -251,4 +252,10 @@ This section is not yet fully documented.
     * File must be downloaded
     * No need to download again
     * Can be run with phone's browser
+"|""
+ITM30|Feature: Device Incompatibility Warning|"
+In case of incompatibility with the device,
+a warning is displayed to clarify the situation.
+The following situations are handled:
+* Absence of JavaScript
 "|""
