@@ -1,17 +1,47 @@
 Item|Name|Contents|Links
 ITM0|ZeldaDoc|0.1.0|""
-ITM1|Title|"
-Flush (score-tracking tool)
-- [ITM1 ] : Title Section
+ITM1|Introduction|"
+Welcome to the 'Mellbye Flush' project.
+The purpose of this document is to track all information
+related to the development of this project.
+This document is intended to be entirely self-descriptive,
+and the unique and complete source of information
+regarding this project.
+
+The information in this document is organised
+as a collection of items,
+each item being identified by a unique number
+denoted by the prefix 'ITM'.
+References to other items are made
+by wrapping the identifier in square brackets.
+For example: [ITM1].
+
+The tool you are using to view this document
+may present hyperlinks to referenced items;
+or if you are viewing this as plain text,
+you may locate an item
+or any other mentions of it
+by running a search through the document.
+
+Read [IMPORTED2] for a guide to using this document.
+For all other information,
+go to the table of contents in [ITM2].
+"|""
+ITM2|Table of Contents|"
+- [ITM1 ] : Introduction
+- [ITM2 ]: Table of Contents
+- [IMPORTED2]: Document Guide
 - [ITM27] : About this Document
-- [ITM28] : Project Procedures
-- [ITM2 ] : Feature List
+- [IMPORTED10]: Functional Description
+- [IMPORTED11]: Feature List
+- [LEGACY2 ] : Feature List
 - [ITM21] : Known Issues
+- [ITM28] : Project Procedures
 - [ITM9 ] : Implementation Plan
 - [ITM10] : Methodology
 - [ITM12] : To-do list
 "|""
-ITM2|Feature List|"
+LEGACY2|Feature List|"
 The user can…
 * [ITM26] : Comfortably view all visible content from any device
 * [ITM17] : View an appropriate label for each game round
@@ -40,6 +70,16 @@ TODO: split feature description
 into 'functional need',
 'abstract model',
 and 'technical implementation'
+"|""
+IMPORTED11|Feature List|"
+This item details the complete list of features
+provided to the user.
+Every command the user may give,
+and every behaviour that can be expected from the tool,
+should have documentation accessible through this item.
+* [IMPORTED15] Query state of backup
+* [IMPORTED12] Launch backup
+* [IMPORTED13] Access backed-up files
 "|""
 ITM3|Feature: View Game Data|"
 Game data elements (ITM23) are visible and accessible to the user.
@@ -274,52 +314,18 @@ ITM31|Issue: Accessibility|"
 No particular consideration has yet been taken
 to ensure adequate accessibility for users requiring it.
 "|""
-IMPORTED1|Introduction|"
-Welcome to the 'Mellbye Flush' project.
-The purpose of this document is to track all information
-related to the development of this project.
-This document is intended to be entirely self-descriptive,
-and the unique and complete source of information
-regarding this project.
-
-The information in this document is organised
-as a collection of items,
-each item being identified by a unique number
-denoted by the prefix 'ITM'.
-References to other items are made
-by wrapping the identifier in square brackets.
-For example: [ITM1].
-
-The tool you are using to view this document
-may present hyperlinks to referenced items;
-or if you are viewing this as plain text,
-you may locate an item
-or any other mentions of it
-by running a search through the document.
-
-Read [ITM2] for a guide to using this document.
-For all other information,
-go to the table of contents in [ITM3].
-"|""
 IMPORTED2|Document Guide|"
 This guide will explain the concepts behind this document,
 as well as how to read and understand its structure.
 It will not explain elements pertaining to the project itself.
 If that is what you are looking for,
-go to the table of contents ([IMPORTED3]).
+go to the table of contents ([ITM2]).
 
 Visit the following sections for guides
 to the different aspects of the document:
 * [IMPORTED8]: Item Structure
 * [IMPORTED4]: Segment Definitions
 * [IMPORTED9]: Rationale
-"|""
-IMPORTED3|Table of Contents|"
-- [IMPORTED1]: Introduction
-- [IMPORTED2]: Document Guide
-- [IMPORTED3]: Table of Contents
-- [IMPORTED10]: Functional Description
-- [IMPORTED11]: Feature List
 "|""
 IMPORTED4|Segment Definitions|"
 - Item: [IMPORTED5]
@@ -382,16 +388,6 @@ to perform an automated backup of arbitrary content
 hosted in other locations,
 with the possibility of tracking incremental updates
 to the backup.
-"|""
-IMPORTED11|Feature List|"
-This item details the complete list of features
-provided to the user.
-Every command the user may give,
-and every behaviour that can be expected from the tool,
-should have documentation accessible through this item.
-* [IMPORTED15] Query state of backup
-* [IMPORTED12] Launch backup
-* [IMPORTED13] Access backed-up files
 "|""
 IMPORTED12|Feature: Launch backup|"
 The user is able to launch the 'backup' command.
