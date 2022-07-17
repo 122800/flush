@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog]
 and this project adheres to [Semantic Versioning]
 (https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.1.0-beta.1] - 2022-07-17
 
 ### Added 
 
@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning]
 - Rank players alphabetically or by lowest score
   (inverse sort not available as of now)
 - Warn before page close or reload to prevent accidental data loss
+- Warn if JavaScript is not enabled
 
 ### Removed
 

@@ -3,6 +3,7 @@ ITM1|Title|"
 Flush (score-tracking tool)
 - [ITM1 ] : Title Section
 - [ITM27] : About this Document
+- [ITM28] : Project Procedures
 - [ITM2 ] : Feature List
 - [ITM21] : Known Issues
 - [ITM9 ] : Implementation Plan
@@ -23,6 +24,7 @@ The user can…
 * [ITM20] : Be safeguarded against accidental loss of game data (ITM23)
             on page close/reload
 * [ITM11] : View additional meta-data relative to the program
+* [ITM30] : See a warning in case of incompatibility with the device
 
 Tentative features:
 
@@ -233,6 +235,27 @@ With minimal need for manual resizing, the user can:
 * Show/display the game progress (ITM3) to others nearby
 "|""
 ITM27|About this Document|"
-This section not yet fully documented.
+This section is not yet fully documented.
 Types of links: [ITM16], [ITM19].
+"|""
+ITM28|Project Procedures|"
+This section is not yet fully documented.
+- [ITM29] Release
+"|""
+ITM29|Procedure: Release|"
+This section is not yet fully documented.
+- Use branch `release` to bump version number.
+- Export to file: `MellbyeFlush-{version}.html`
+- Share through Proton Drive
+  * With password & expiration date?
+  * Indicate basic use instructions:
+    * File must be downloaded
+    * No need to download again
+    * Can be run with phone's browser
+"|""
+ITM30|Feature: Device Incompatibility Warning|"
+In case of incompatibility with the device,
+a warning is displayed to clarify the situation.
+The following situations are handled:
+* Absence of JavaScript
 "|""
