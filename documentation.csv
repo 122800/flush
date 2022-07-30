@@ -33,49 +33,12 @@ ITM2|Table of Contents|"
 - [IMPORTED2]: Document Guide
 - [ITM27] : About this Document
 - [IMPORTED10]: Functional Description
-- [LEGACY2 ] : Feature List
+- [ITM32] : Feature List
 - [ITM21] : Known Issues
 - [ITM28] : Project Procedures
 - [ITM9 ] : Implementation Plan
 - [ITM10] : Methodology
 - [ITM12] : To-do list
-"|""
-LEGACY2|Feature List|"
-This item details the complete list of features
-provided to the user.
-Every command that the user may give,
-as well as every behaviour that can be expected
-from the tool,
-must have documentation accessible through this item.
-To encourage a user-centric design,
-the features in this list are expressed so as to fit the form
-« The user can… »
-
-* [ITM26] : Comfortably view all visible content from any device
-* [ITM17] : View an appropriate label for each game round
-* [ITM25] : Benefit from an initial set of players for convenience
-* [ITM3 ] : View all game data (ITM23) elements
-* [ITM13] : View each player's calculated player score (ITM14)
-* [ITM7 ] : Inscribe a player's gains for a given round
-* [ITM4 ] : Add a player to the game
-* [ITM24] : Edit a player's name
-* [ITM18] : Consult the players' ranking
-* [ITM20] : Be safeguarded against accidental loss of game data (ITM23)
-            on page close/reload
-* [ITM11] : View additional meta-data relative to the program
-* [ITM30] : See a warning in case of incompatibility with the device
-
-Tentative features:
-
-* View the scores (ITM14) up to an arbitrary round (mini-graph?)
-* Export game data (ITM23) to text format
-* Benefit from all features with mobile-friendly/first considerations
-* Have access to a reminder of the rules for consultation
-* Virtualization of gameplay
-* A little (star, trophy?) icon to highlight each round's winner
-
-TODO: split feature description into 'functional need',
-'abstract model', and 'technical implementation'
 "|""
 ITM3|Feature: View Game Data|"
 Game data elements (ITM23) are visible and accessible to the user.
@@ -309,6 +272,43 @@ The following situations are handled:
 ITM31|Issue: Accessibility|"
 No particular consideration has yet been taken
 to ensure adequate accessibility for users requiring it.
+"|""
+ITM32|Feature List|"
+This item details the complete list of features
+provided to the user.
+Every command that the user may give,
+as well as every behaviour that can be expected
+from the tool,
+must have documentation accessible through this item.
+To encourage a user-centric design,
+the features in this list are expressed so as to fit the form
+« The user can… »
+
+* [ITM26] : Comfortably view all visible content from any device
+* [ITM17] : View an appropriate label for each game round
+* [ITM25] : Benefit from an initial set of players for convenience
+* [ITM3 ] : View all game data (ITM23) elements
+* [ITM13] : View each player's calculated player score (ITM14)
+* [ITM7 ] : Inscribe a player's gains for a given round
+* [ITM4 ] : Add a player to the game
+* [ITM24] : Edit a player's name
+* [ITM18] : Consult the players' ranking
+* [ITM20] : Be safeguarded against accidental loss of game data (ITM23)
+            on page close/reload
+* [ITM11] : View additional meta-data relative to the program
+* [ITM30] : See a warning in case of incompatibility with the device
+
+Tentative features:
+
+* View the scores (ITM14) up to an arbitrary round (mini-graph?)
+* Export game data (ITM23) to text format
+* Benefit from all features with mobile-friendly/first considerations
+* Have access to a reminder of the rules for consultation
+* Virtualization of gameplay
+* A little (star, trophy?) icon to highlight each round's winner
+
+TODO: split feature description into 'functional need',
+'abstract model', and 'technical implementation'
 "|""
 IMPORTED2|Document Guide|"
 This guide will explain the concepts behind this document,
