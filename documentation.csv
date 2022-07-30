@@ -336,26 +336,29 @@ TODO: organize these points:
 ITM35|ZeldaDoc: Item Structure|"
 Items are composed of segments,
 and all data or meta-data pertaining to the item
-is contained in these segments.
+is organized in these segments.
 This document defines several types of segments,
-and these are shared by every item in the document.
+and every item in the document shares this same structure.
 
-In a flat data representation,
+As an example,
+in a flat data representation,
 this document could be seen as a table
 in which every item is a line,
 and segments would be the columns
 into which data is distributed.
 
-Save for the very first item,
-the numerical ID
-or the order in which items are defined
-or positioned in the document
+Save for the very first items,
+the numerical ID or the order
+in which items are defined or positioned in the document
 is not important.
 It is therefore better to navigate by following links
 than by reading the items 'in order' numerically
 or from top to bottom.
+The first two items,
+[ITM0] and [ITM1],
+hold a special place as the starting points for the document.
 
-The reference for these segments and their definitions
+The reference for the document's segments and their definitions
 can be found in [IMPORTED4].
 "|""
 IMPORTED4|ZeldaDoc: Segment Definitions|"
