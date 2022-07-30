@@ -5,22 +5,19 @@ Welcome to the 'Mellbye Flush' project.
 The purpose of this document is to track all information
 related to the development of this project.
 This document is intended to be entirely self-descriptive,
-and the unique and complete source of information
-regarding this project.
+and the unique and complete source of information regarding this project.
 
-The information in this document is organised
-as a collection of items,
+The information in this document is organised as a collection of items,
 each item being identified by a unique number
 denoted by the prefix 'ITM'.
-References to other items are made
-by wrapping the identifier in square brackets.
+References to other items
+are made by wrapping the identifier in square brackets.
 For example: [ITM1].
 
 The tool you are using to view this document
 may present hyperlinks to referenced items;
 or if you are viewing this as plain text,
-you may locate an item
-or any other mentions of it
+you may locate an item or any other mentions of it
 by running a search through the document.
 
 Read [ITM33] for a guide to using this document.
