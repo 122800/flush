@@ -23,14 +23,14 @@ you may locate an item
 or any other mentions of it
 by running a search through the document.
 
-Read [IMPORTED2] for a guide to using this document.
+Read [ITM33] for a guide to using this document.
 For all other information,
 go to the table of contents in [ITM2].
 "|""
 ITM2|Table of Contents|"
 - [ITM1 ] : Introduction
 - [ITM2 ]: Table of Contents
-- [IMPORTED2]: Document Guide
+- [ITM33]: Document Guide
 - [ITM27] : About this Document
 - [IMPORTED10]: Functional Description
 - [ITM32] : Feature List
@@ -310,18 +310,18 @@ Tentative features:
 TODO: split feature description into 'functional need',
 'abstract model', and 'technical implementation'
 "|""
-IMPORTED2|Document Guide|"
+ITM33|Document Guide|"
 This guide will explain the concepts behind this document,
 as well as how to read and understand its structure.
-It will not explain elements pertaining to the project itself.
+It will not explain elements pertaining to the development project itself.
 If that is what you are looking for,
-go to the table of contents ([ITM2]).
+consult the table of contents ([ITM2]).
 
-Visit the following sections for guides
-to the different aspects of the document:
+Read through the following sections for guides
+to the different aspects of this document:
+* [IMPORTED9]: Rationale
 * [IMPORTED8]: Item Structure
 * [IMPORTED4]: Segment Definitions
-* [IMPORTED9]: Rationale
 "|""
 IMPORTED4|Segment Definitions|"
 - Item: [IMPORTED5]
