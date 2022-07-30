@@ -321,7 +321,7 @@ Read through the following sections for guides
 to the different aspects of this document:
 * [ITM34]: Rationale
 * [ITM35]: Item Structure
-* [IMPORTED4]: Segment Definitions
+* [ITM36]: Segment Definitions
 "|""
 ITM34|ZeldaDoc: Rationale|"
 The style in which this document is written
@@ -359,34 +359,38 @@ The first two items,
 hold a special place as the starting points for the document.
 
 The reference for the document's segments and their definitions
-can be found in [IMPORTED4].
+can be found in [ITM36].
 "|""
-IMPORTED4|ZeldaDoc: Segment Definitions|"
-- Item: [IMPORTED5]
-- Name: [IMPORTED6]
-- Contents: [IMPORTED7]
+ITM36|ZeldaDoc: Segment Definitions|"
+Items are composed of the following segments:
+- [ITM37] : Item
+- [ITM38] : Name
+- [ITM39] : Contents
+- [ITM40] : Links
 "|""
-IMPORTED5|ZeldaDoc: Segment Definition: Item|"
+ITM37|ZeldaDoc: Segment Definition: Item|"
 The item's numerical ID.
 Immutable.
-The number is prefixed by the letters 'IMPORTED'.
-Zeroes ('0') may be added
-to pad the number to a certain length,
+The number is prefixed by the letters 'ITM'.
+Zeroes ('0') may be added to pad the number to a certain length
 without changing the validity of the ID
-(e.g. 'IMPORTED005').
+(e.g. 'ITM005' is equivalent to 'ITM5').
 "|""
-IMPORTED6|ZeldaDoc: Segment Definition: Name|"
-The short primary title
-or human-friendly identifier
-of the item.
+ITM38|ZeldaDoc: Segment Definition: Name|"
+The short primary title or human-friendly identifier of the item.
 Can be subject to change;
-only the item's ID ([IMPORTED5]) must be used
-to durably reference an item.
+only the item's ID (ITM37) must be used to durably reference an item.
 "|""
-IMPORTED7|ZeldaDoc: Segment Definition: Contents|"
+ITM39|ZeldaDoc: Segment Definition: Contents|"
 The primary contents of the item,
-intended to be read by the user.
+intended to carry its information payload.
 The contents may vary greatly from item to item.
+"|""
+ITM40|ZeldaDoc: Segment Definition: Links|"
+A list of links that have been declared explicitly
+between this item and another.
+Links are always bidirectional
+and must be declared in both items involved.
 "|""
 IMPORTED10|Functional Description|"
 This tool's function is to allow a user
