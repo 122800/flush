@@ -319,9 +319,19 @@ consult the table of contents ([ITM2]).
 
 Read through the following sections for guides
 to the different aspects of this document:
-* [IMPORTED9]: Rationale
+* [ITM34]: Rationale
 * [IMPORTED8]: Item Structure
 * [IMPORTED4]: Segment Definitions
+"|""
+ITM34|Rationale|"
+The style in which this document is written
+arose out of a desire for better governance
+over the entirety of a project.
+
+TODO: organize these points:
+* 1 place to access all documentation, or links thereto
+* an organized structure where every element finds a place, no orphans
+* the need for the document to explain itself, with assumption of plain text
 "|""
 IMPORTED4|Segment Definitions|"
 - Item: [IMPORTED5]
@@ -374,9 +384,6 @@ or from top to bottom.
 
 The reference for these segments and their definitions
 can be found in [IMPORTED4].
-"|""
-IMPORTED9|Rationale|"
-TODO: explain how no orphans
 "|""
 IMPORTED10|Functional Description|"
 This tool's function is to allow a user
