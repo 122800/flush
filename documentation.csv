@@ -320,7 +320,7 @@ consult the table of contents ([ITM2]).
 Read through the following sections for guides
 to the different aspects of this document:
 * [ITM34]: Rationale
-* [IMPORTED8]: Item Structure
+* [ITM35]: Item Structure
 * [IMPORTED4]: Segment Definitions
 "|""
 ITM34|Rationale|"
@@ -332,6 +332,31 @@ TODO: organize these points:
 * 1 place to access all documentation, or links thereto
 * an organized structure where every element finds a place, no orphans
 * the need for the document to explain itself, with assumption of plain text
+"|""
+ITM35|Item Structure|"
+Items are composed of segments,
+and all data or meta-data pertaining to the item
+is contained in these segments.
+This document defines several types of segments,
+and these are shared by every item in the document.
+
+In a flat data representation,
+this document could be seen as a table
+in which every item is a line,
+and segments would be the columns
+into which data is distributed.
+
+Save for the very first item,
+the numerical ID
+or the order in which items are defined
+or positioned in the document
+is not important.
+It is therefore better to navigate by following links
+than by reading the items 'in order' numerically
+or from top to bottom.
+
+The reference for these segments and their definitions
+can be found in [IMPORTED4].
 "|""
 IMPORTED4|Segment Definitions|"
 - Item: [IMPORTED5]
@@ -359,31 +384,6 @@ IMPORTED7|Segment Definition: Contents|"
 The primary contents of the item,
 intended to be read by the user.
 The contents may vary greatly from item to item.
-"|""
-IMPORTED8|Item Structure|"
-Items are composed of segments,
-and all data or meta-data pertaining to the item
-is contained in these segments.
-This document defines several types of segments,
-and these are shared by every item in the document.
-
-In a flat data representation,
-this document could be seen as a table
-in which every item is a line,
-and segments would be the columns
-into which data is distributed.
-
-Save for the very first item,
-the numerical ID
-or the order in which items are defined
-or positioned in the document
-is not important.
-It is therefore better to navigate by following links
-than by reading the items 'in order' numerically
-or from top to bottom.
-
-The reference for these segments and their definitions
-can be found in [IMPORTED4].
 "|""
 IMPORTED10|Functional Description|"
 This tool's function is to allow a user
