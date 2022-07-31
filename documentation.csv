@@ -120,8 +120,7 @@ Specific design choices and principles are outlined here in 'Methodology'.
   ./src             : Code assets
   ./src/index.html  : Main file / Starting point
 
-For simplicity we may choose to combine all assets
-in a single file,
+For simplicity we may choose to combine all assets in a single file,
 to begin with.
 "|""
 ITM11|Feature: View Program Meta-data|"
