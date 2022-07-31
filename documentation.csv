@@ -245,16 +245,15 @@ This project's management guide.
 This section is not yet fully documented.
 - [ITM29] : Release
 "|""
-ITM29|Procedure: Release|"
+ITM29|Operations: Release|"
 This section is not yet fully documented.
-- Use branch `release` to bump version number.
+- Use branch `release` to bump the version number.
 - Export to file: `MellbyeFlush-{version}.html`
 - Share through Proton Drive
   * With password & expiration date?
   * Indicate basic use instructions:
-    * File must be downloaded
-    * No need to download again
-    * Can be run with phone's browser
+    * File must be downloaded the first time only
+    * Can be run with your phone's browser
 "|""
 ITM30|Feature: Device Incompatibility Warning|"
 In case of incompatibility with the device,
