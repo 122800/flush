@@ -167,7 +167,7 @@ Consumed:ITM18
 ITM15|Concept(Technical): Dynamic Refresh|"
 Code logic triggered by an event.
 "|""
-ITM16|Link: Encompass|"
+ITM16|Link: Encompass/Encompasses|"
 An item encompasses or is encompassed.
 An item relies/depends on the scope defined by another.
 Updates to the encompassed item must be reflected
@@ -197,7 +197,7 @@ Consumes:ITM6
 Consumes:ITM8
 Consumes:ITM14
 "
-ITM19|Link: Consume|"
+ITM19|Link: Consume/Consumes|"
 An item consumes or is consumed.
 An item processes the contents of another.
 Datatype constraints from the consumed item
