@@ -400,30 +400,3 @@ is for this tool to be easily accessible from one's mobile phone,
 thereby naturally replacing the scramble for a pen and a piece of paper
 that often occurs at the start of a game.
 "|""
-IMPORTED12|Feature: Launch backup|"
-The user is able to launch the 'backup' command.
-This feature includes the following sub-features:
-* [IMPORTED14] Monitor operation progress
-"|""
-IMPORTED13|Feature: Access backed-up files|"
-The user can access and view the backed-up data
-in a human-readable format.
-"|""
-IMPORTED14|Sub-feature: Monitor operation progress|"
-The user is shown the progression
-of a long-running operation.
-The user is notified
-of important life-cycle events of the operation:
-- Started
-- Paused
-- Resumed
-- Stopped
-"|""
-IMPORTED15|Feature: Query state of backup|"
-The user can access an overview
-of the current state of the backup.
-The following information is provided:
-* Timestamp of last backup
-* Current size of backup
-* Number of items backed up
-"|""
