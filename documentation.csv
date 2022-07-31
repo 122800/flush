@@ -243,6 +243,7 @@ With minimal need for manual resizing, the user can:
 ITM28|Operations Manual|"
 This project's management guide.
 This section is not yet fully documented.
+- [ITM43] : Documentation Update
 - [ITM29] : Release
 "|""
 ITM29|Operations: Release|"
@@ -401,4 +402,14 @@ that often occurs at the start of a game.
 "|""
 ITM42|Technical Description|"
 This is a single-page HTML/CSS/JS utility.
+"|""
+ITM43|Operations: Documentation Update|"
+The following sections must be periodically reviewed and kept up to date,
+because they are not among the items that will be kept updated organically
+as the project evolves.
+* [ITM41] : Functional Description
+* [ITM42] : Technical Description
+* [ITM28] : Operations Manual
+* [ITM9 ] : Implementation Plan
+* [ITM10] : Methodology
 "|""
