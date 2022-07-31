@@ -241,10 +241,6 @@ With minimal need for manual resizing, the user can:
 * Comfortably use all functionality
 * Show/display the game progress (ITM3) to others nearby
 "|""
-ITM27|About this Document|"
-This section is not yet fully documented.
-Types of links: [ITM16], [ITM19].
-"|""
 ITM28|Project Procedures|"
 This section is not yet fully documented.
 - [ITM29] Release
@@ -388,6 +384,10 @@ A list of links that have been declared explicitly
 between this item and another.
 Links are always bidirectional
 and must be declared in both items involved.
+
+Link types and their definitions:
+* [ITM16]: Encompass/Encompasses
+* [ITM19]: Consume/Consumes
 "|""
 ITM41|Functional Description|"
 Mellbye Flush is a tool to help keep track of scores in a game of Flush.
