@@ -31,7 +31,7 @@ ITM2|Table of Contents|"
 - [ITM41] : Functional Description
 - [ITM32] : Feature List
 - [ITM21] : Known Issues
-- [ITM28] : Project Procedures
+- [ITM28] : Operations Manual
 - [ITM9 ] : Implementation Plan
 - [ITM10] : Methodology
 - [ITM12] : To-do list
@@ -240,9 +240,10 @@ With minimal need for manual resizing, the user can:
 * Comfortably use all functionality
 * Show/display the game progress (ITM3) to others nearby
 "|""
-ITM28|Project Procedures|"
+ITM28|Operations Manual|"
+This project's management guide.
 This section is not yet fully documented.
-- [ITM29] Release
+- [ITM29] : Release
 "|""
 ITM29|Procedure: Release|"
 This section is not yet fully documented.
