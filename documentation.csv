@@ -1,6 +1,10 @@
 Item|Name|Contents|Links
 ITM1|Title|"
-Flush (score-tracking tool)
+Flush (score-tracking tool).
+
+This introduction section is not yet fully documented.
+Below is the table of contents.
+
 - [ITM1 ] : Title Section
 - [ITM27] : About this Document
 - [ITM28] : Project Procedures
@@ -75,7 +79,7 @@ ITM9|Implementation Plan|"
 # Code-Complexity Consideration:
 
 In favour of initial feature-development efficiency
-we choose to forego aspirations of 'proper' implementation
+we choose to forgo aspirations of 'proper' implementation
 using such alien technologies
 as TypeScript,
 HTML modules,
