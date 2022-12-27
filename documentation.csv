@@ -18,7 +18,7 @@ ITM2|Feature List|"
 The user can…
 * [ITM26] : Comfortably view all visible content from any device
 * [ITM17] : View an appropriate label for each game round
-* [ITM25] : Benefit from an initial set of players for convenience
+* [ITM25] : Benefit from a preset initial game configuration for convenience
 * [ITM3 ] : View all game data (ITM23) elements
 * [ITM13] : View each player's calculated player score (ITM14)
 * [ITM7 ] : Inscribe a player's gains for a given round
@@ -229,9 +229,11 @@ and must be protected from data loss or corruption.
 ITM24|Feature: Edit Player Name|"
 * A player's name (ITM6) can be modified
 "|""
-ITM25|Feature: Initial Player Loadout|"
-An initial set of 4 (unnamed) players are created
-automatically on loading, for convenience.
+ITM25|Feature: Initial Game Configuration|"
+An initial set of game configurations are applied automatically on loading,
+for convenience.
+Configurations:
+* A set of 4 (unnamed) players
 "|""
 ITM26|Viewing Comfort of Visible Content|"
 Visible content is sized comfortably for use on all devices.
