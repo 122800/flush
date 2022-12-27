@@ -26,7 +26,6 @@ The user can…
 * [ITM24] : Edit a player's name
 * [ITM18] : Consult the players' ranking
 * [ITM20] : Be safeguarded against accidental loss of game data (ITM23)
-            on page close/reload
 * [ITM11] : View additional meta-data relative to the program
 * [ITM30] : See a warning in case of incompatibility with the device
 
@@ -206,8 +205,11 @@ may need to be reflected in the consuming one.
 "|""
 ITM20|Feature: Accidental Reset Protection|"
 A security mechanism is in place
-to avoid accidentally losing the game data (ITM23)
-by closing or reloading the page.
+to avoid accidentally losing the game data (ITM23).
+
+Managed risk situations:
+Reloading the page.
+Closing the tab.
 "|""
 ITM21|Known Issues|"
 * [ITM22] BFCache Incompatibility
