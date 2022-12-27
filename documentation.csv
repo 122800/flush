@@ -138,7 +138,6 @@ ITM11|Feature: View Program Meta-data|"
 "|""
 ITM12|To-do List|"
 P1
-* Prevent accidental data-loss even on browser closed (rework of ITM20)
 * [ITM5] Remove a player from the game
 P3
 * Allow filling in from average of others
@@ -146,8 +145,6 @@ P3
 * Ranking operation (ITM18) should be aware of invalidated rank
   when points change
   (let go of 'sorted' indication?)
-* Improve page-reload warning (ITM20) behaviour
-  when there are no unsaved changes
 * Control & sanitize user input
 P4
 * Configure relevant HTML 'meta' tags
