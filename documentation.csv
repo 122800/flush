@@ -61,6 +61,7 @@ Trimmed.
 At least 1 character.
 "|"
 Consumed:ITM18
+Encompassed:ITM23
 "
 ITM7|Feature: Inscribing Gains per Round|"
 A player's gains (ITM8) can be inscribed for a given round.
@@ -73,6 +74,7 @@ Initialized to blank '' to indicate no data.
 "|"
 Consumed:ITM18
 Encompassed:ITM13
+Encompassed:ITM23
 "
 ITM9|Implementation Plan|"
 # Code-Complexity Consideration:
@@ -227,7 +229,10 @@ These cannot be regenerated or calculated automatically
 and must be protected from data loss or corruption.
 * Player names (ITM6)
 * Player gains (ITM8) for each round
-"|""
+"|"
+Encompasses:ITM6
+Encompasses:ITM8
+"
 ITM24|Feature: Edit Player Name|"
 * A player's name (ITM6) can be modified
 "|""
