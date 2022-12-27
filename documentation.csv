@@ -211,6 +211,15 @@ to avoid accidentally losing the game data (ITM23).
 Managed risk situations:
 Reloading the page.
 Closing the tab.
+Closing the browser.
+Accidentally triggering [ITM31].
+
+Implementation:
+All game data (ITM23) is saved in `Window.localStorage`
+on modification.
+If present at startup,
+it is loaded into the playing area.
+A confirmation prompt is added to [ITM31].
 "|""
 ITM21|Known Issues|"
 * [ITM22] BFCache Incompatibility
