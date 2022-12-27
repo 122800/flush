@@ -28,6 +28,7 @@ The user can…
 * [ITM20] : Be safeguarded against accidental loss of game data (ITM23)
 * [ITM11] : View additional meta-data relative to the program
 * [ITM30] : See a warning in case of incompatibility with the device
+* [ITM31] : Quickly reset the game to its initial state (ITM25)
 
 Tentative features:
 
@@ -270,4 +271,12 @@ In case of incompatibility with the device,
 a warning is displayed to clarify the situation.
 The following situations are handled:
 * Absence of JavaScript
+"|""
+ITM31|Feature: Game State Reset|"
+Allows the user to quickly reset the game to its initial state (ITM25).
+Implementation:
+A 'clear data' button is made available.
+Resets all existing game data (ITM23).
+Clears the saved data from [ITM20].
+Reapplies [ITM25].
 "|""
