@@ -214,6 +214,8 @@ Closing the tab.
 Closing the browser.
 Accidentally triggering [ITM31].
 
+Some usage constraints are identified in [ITM32].
+
 Implementation:
 All game data (ITM23) is saved as [ITM32] on modification.
 [ITM32] is loaded into the playing area on startup (ITM25) if present.
@@ -291,6 +293,10 @@ Reapplies [ITM25].
 ITM32|Concept: Local Datastore|"
 The serialized representation of all game data (ITM23)
 stored in `Window.localStorage` across sessions.
+
+Usage constraints:
+- Data persistence and retrieval is protocol-specific.
+- The behaviour is undefined for documents loaded from `file:` URLs.
 "|"
 Encompassed:ITM23
 "
