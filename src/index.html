@@ -174,7 +174,7 @@
                 let playerDataJSON = JSON.stringify(playerDataDTO);
 
                 // persist
-                localStorage.setItem("PLAYER_DATA", playerDataJSON);
+                Flush.Utils.LocalStorage.setItem(Flush.Constants.ITM32_PLAYER_DATA, playerDataJSON);
             },
 
             calcFormScore(form) {/*ITM13*/
@@ -255,10 +255,23 @@
                     }
                 },
 
+                LocalStorage: {/*ITM20*/
+                    getItem(key) {
+                        return localStorage.getItem(key);
+                    },
+                    setItem(key, value) {
+                        return localStorage.setItem(key, value);
+                    },
+                },
+
                 // arbitrary variable storage
                 var: {
                     playerNumber: 0,
                 },
+            },
+
+            Constants: {
+                ITM32_PLAYER_DATA: "PLAYER_DATA",
             },
         };
 
