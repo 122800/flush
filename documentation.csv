@@ -248,6 +248,8 @@ ITM24|Feature: Edit Player Name|"
 ITM25|Feature: Initial Game Configuration|"
 An initial set of game configurations are applied automatically on loading,
 for convenience.
+This feature is not applied if saved data is found in [ITM32].
+
 Configurations:
 * A set of 4 (unnamed) players
 "|""
