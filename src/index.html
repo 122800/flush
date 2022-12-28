@@ -239,12 +239,29 @@
                   return event.returnValue = 'Er du sikker? Dataen din vil ikke lagres.';
                 },
 
+                initializeGame() {
+                    if(Flush.Utils.savedGameExists()) {
+                        // ITM20
+                        Flush.Utils.loadSavedGame();
+                    } else {
+                        // ITM25
+                        Flush.Utils.applyInitialGameConfigs();
+                    }
+                },
+
                 applyInitialGameConfigs() {/*ITM25*/
                     // Spawn starting players
                     let numStartingPlayers = 4;
                     for (let i = 0; i < numStartingPlayers; i++) {
                         Flush.addPlayer();
                     }
+                },
+
+                loadSavedGame() {/*ITM20*/
+                },
+
+                savedGameExists() {/*ITM20*/
+                    return Flush.Utils.LocalStorage.getItem(Flush.Constants.ITM32_PLAYER_DATA) != null;
                 },
 
                 LocalStorage: {/*ITM20*/
@@ -270,8 +287,7 @@
         // Init
         window.addEventListener('beforeunload', Flush.Utils.pageUnloadListener);/*ITM20*/
 
-        // ITM25
-        Flush.Utils.applyInitialGameConfigs();
+        Flush.Utils.initializeGame();
     </script>
 
     <noscript><!-- ITM30 -->
