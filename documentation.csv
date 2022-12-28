@@ -309,6 +309,15 @@ Usage constraints:
 Implementation:
 `localStorage` keys:
 - `PLAYER_DATA`: Contains ITM6, ITM8.
+  Data model:
+  ```
+  [
+    {
+      "ITM6": "Player1",
+      "ITM8": ["5", "10", "", "", "", ""]
+    }
+  ]
+  ```
 "|"
 Encompassed:ITM23
 "
