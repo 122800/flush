@@ -121,6 +121,12 @@ with one 'form' element per player,
 and we'll see how it goes.
 
 And actually you can use the HTML 'output' element for this!
+
+# Data Model
+
+No proper JS data model is currently maintained,
+game data (ITM23) is stored in HTML
+and extracted into JS as needed for manipulation.
 "|""
 ITM10|Methodology|"
 Specific design choices and principles are outlined here in 'Methodology'.
@@ -299,6 +305,10 @@ stored in `Window.localStorage` across sessions.
 Usage constraints:
 - Data persistence and retrieval is protocol-specific.
 - The behaviour is undefined for documents loaded from `file:` URLs.
+
+Implementation:
+`localStorage` keys:
+- `PLAYER_DATA`: Contains ITM6, ITM8.
 "|"
 Encompassed:ITM23
 "

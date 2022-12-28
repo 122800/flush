@@ -144,6 +144,37 @@
 
             handleFormEdit(form) {
                 Flush.calcFormScore(form);
+                Flush.persistGameData();
+            },
+
+            persistGameData(form) {/*ITM20*/
+                let $forms = this.$.dynamic.forms();
+
+                // generate a data object from each Form element
+                /* Data model:
+                    [
+                      {
+                        "ITM6": "Player1",
+                        "ITM8": ["5", "10", "", "", "", ""]
+                      }
+                    ]
+                */
+                let playerDataDTO = Array.from($forms).map(f => {
+                    let playerDTO = {};
+                    playerDTO.ITM6 = f.elements.ITM6.value;
+                    playerDTO.ITM8 = [];
+                    Array.from(f.elements).forEach(e => {
+                        if(e.type != "number") return;
+                        playerDTO.ITM8.push(e.value);
+                    });
+                    return playerDTO;
+                });
+
+                // stringify
+                let playerDataJSON = JSON.stringify(playerDataDTO);
+
+                // persist
+                localStorage.setItem("PLAYER_DATA", playerDataJSON);
             },
 
             calcFormScore(form) {/*ITM13*/
