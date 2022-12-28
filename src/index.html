@@ -212,6 +212,14 @@
                   return event.returnValue = 'Er du sikker? Dataen din vil ikke lagres.';
                 },
 
+                applyInitialGameConfigs() {/*ITM25*/
+                    // Spawn starting players
+                    let numStartingPlayers = 4;
+                    for (let i = 0; i < numStartingPlayers; i++) {
+                        Flush.addPlayer();
+                    }
+                },
+
                 // arbitrary variable storage
                 var: {
                     playerNumber: 0,
@@ -221,11 +229,9 @@
 
         // Init
         window.addEventListener('beforeunload', Flush.Utils.pageUnloadListener);/*ITM20*/
-        // ITM25: Spawn starting players
-        Flush.addPlayer();
-        Flush.addPlayer();
-        Flush.addPlayer();
-        Flush.addPlayer();
+
+        // ITM25
+        Flush.Utils.applyInitialGameConfigs();
     </script>
 
     <noscript><!-- ITM30 -->
