@@ -111,18 +111,18 @@
     <section>
         <table id="game"><!-- ITM3 -->
             <tr>
-                <th onclick="Flush.sortTable(0)" class="sort-active">Spiller</th>
-                <th onclick="Flush.sortTable(1)"><!-- ITM17 -->2&nbsp;tress</th>
-                <th onclick="Flush.sortTable(2)"><!-- ITM17 -->1&nbsp;tress <br> 1&nbsp;serie</th>
-                <th onclick="Flush.sortTable(3)"><!-- ITM17 -->2&nbsp;serier</th>
-                <th onclick="Flush.sortTable(4)"><!-- ITM17 -->3&nbsp;tress</th>
-                <th onclick="Flush.sortTable(5)"><!-- ITM17 -->2&nbsp;tress <br> 1&nbsp;serie</th>
-                <th onclick="Flush.sortTable(6)"><!-- ITM17 -->1&nbsp;tress <br> 2&nbsp;serier</th>
-                <th onclick="Flush.sortTable(7)"><!-- ITM14 -->Score</th>
+                <th onclick="Flush.Features.ITM18.sortTable(0)" class="sort-active">Spiller</th>
+                <th onclick="Flush.Features.ITM18.sortTable(1)"><!-- ITM17 -->2&nbsp;tress</th>
+                <th onclick="Flush.Features.ITM18.sortTable(2)"><!-- ITM17 -->1&nbsp;tress <br> 1&nbsp;serie</th>
+                <th onclick="Flush.Features.ITM18.sortTable(3)"><!-- ITM17 -->2&nbsp;serier</th>
+                <th onclick="Flush.Features.ITM18.sortTable(4)"><!-- ITM17 -->3&nbsp;tress</th>
+                <th onclick="Flush.Features.ITM18.sortTable(5)"><!-- ITM17 -->2&nbsp;tress <br> 1&nbsp;serie</th>
+                <th onclick="Flush.Features.ITM18.sortTable(6)"><!-- ITM17 -->1&nbsp;tress <br> 2&nbsp;serier</th>
+                <th onclick="Flush.Features.ITM18.sortTable(7)"><!-- ITM14 -->Score</th>
             </tr>
         </table>
         <div>
-            <button type="button" onclick="Flush.addPlayer()"><!-- ITM4 -->+</button>
+            <button type="button" onclick="Flush.Features.ITM4.addPlayer()"><!-- ITM4 -->+</button>
         </div>
     </section>
 
@@ -142,78 +142,89 @@
                 },
             },
 
-            handleFormEdit(form) {
-                Flush.calcFormScore(form);
-            },
-
-            calcFormScore(form) {/*ITM13*/
-                let sum = 0;
-                Array.from(form.elements).forEach(e => {
-                    if(e.type != "number") return;
-                    if(e.value.length < 1) return;
-                    sum += parseInt(e.value, 10);
-                });
-                form.ITM13.value = sum;
-            },
-
-            sortTable(column) {/*ITM18*/
-                let $headers = Flush.$.headers;
-                let $rows = Flush.$.dynamic.rows();
-                let $forms = this.$.dynamic.forms();
-
-                // set/unset css class on headers
-                for (let i = 0; i < $headers.length; i++) {
-                    // add to the clicked column
-                    if(i == column) $headers[i].classList.add("sort-active");
-                    // remove from all others
-                    else $headers[i].classList.remove("sort-active");
-                }
-
-                let i = 0;
-                let indexedRowList = Array.from($forms).reduce((l, $form) => {
-                    l.push({
-                        index: i,
-                        value: $form.elements[column].value,
-                        $row: $rows[i],
-                    });
-                    i++;
-                    return l;
-                }, []);
-
-                // first column is alphabetical
-                if(column == 0) indexedRowList.sort((a, b) => a.value.localeCompare(b.value));
-                // all others are sorted numerically
-                // in case of numerical match, no need for alphabetical fallback
-                else indexedRowList.sort((a, b) => a.value - b.value);
-
-                for (let i = 0; i < indexedRowList.length; i++) {
-                    indexedRowList[i].$row.style["grid-row-start"] = 2 + i;
-                }
-            },
-
-            addPlayer() {/*ITM4*/
-                let $gameTable = Flush.$.game.children[0];// game > tbody
-                let playerNum = ++Flush.Utils.var.playerNumber;
-                let htmlTemplate = `\
+            Features: {
+                ITM4: {
+                    addPlayer() {
+                        let $gameTable = Flush.$.game.children[0];// game > tbody
+                        let playerNum = ++Flush.Utils.var.playerNumber;
+                        let htmlTemplate = `\
 <td><!-- ITM6 --><input form="ITM8-gains-collection-p${playerNum}" name="ITM6" minlength="1" value="Player${playerNum}"><!-- ITM24 --></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)"></td>
 <td><!-- ITM14 --><form id="ITM8-gains-collection-p${playerNum}"><!-- ITM13 --><output name="ITM13">0</output></form></td>`
 
-                let $rowNode = document.createElement("tr");
-                $rowNode.innerHTML = htmlTemplate;
-                $gameTable.appendChild($rowNode);
+                        let $rowNode = document.createElement("tr");
+                        $rowNode.innerHTML = htmlTemplate;
+                        $gameTable.appendChild($rowNode);
+                    },
+                },
+
+                ITM13: {
+                    calcFormScore(form) {
+                        let sum = 0;
+                        Array.from(form.elements).forEach(e => {
+                            if(e.type != "number") return;
+                            if(e.value.length < 1) return;
+                            sum += parseInt(e.value, 10);
+                        });
+                        form.ITM13.value = sum;
+                    },
+                },
+
+                ITM18: {
+                    sortTable(column) {
+                        let $headers = Flush.$.headers;
+                        let $rows = Flush.$.dynamic.rows();
+                        let $forms = Flush.$.dynamic.forms();
+
+                        // set/unset css class on headers
+                        for (let i = 0; i < $headers.length; i++) {
+                            // add to the clicked column
+                            if(i == column) $headers[i].classList.add("sort-active");
+                            // remove from all others
+                            else $headers[i].classList.remove("sort-active");
+                        }
+
+                        let i = 0;
+                        let indexedRowList = Array.from($forms).reduce((l, $form) => {
+                            l.push({
+                                index: i,
+                                value: $form.elements[column].value,
+                                $row: $rows[i],
+                            });
+                            i++;
+                            return l;
+                        }, []);
+
+                        // first column is alphabetical
+                        if(column == 0) indexedRowList.sort((a, b) => a.value.localeCompare(b.value));
+                        // all others are sorted numerically
+                        // in case of numerical match, no need for alphabetical fallback
+                        else indexedRowList.sort((a, b) => a.value - b.value);
+
+                        for (let i = 0; i < indexedRowList.length; i++) {
+                            indexedRowList[i].$row.style["grid-row-start"] = 2 + i;
+                        }
+                    },
+                },
+
+                ITM20: {
+                    pageUnloadListener(event) {
+                      event.preventDefault();
+                      // this message is not guaranteed to appear in every browser
+                      return event.returnValue = 'Er du sikker? Dataen din vil ikke lagres.';
+                    },
+                },
             },
 
             Utils: {
-                pageUnloadListener(event) {/*ITM20*/
-                  event.preventDefault();
-                  // this message is not guaranteed to appear in every browser
-                  return event.returnValue = 'Er du sikker? Dataen din vil ikke lagres.';
+
+                handleFormEdit(form) {
+                    Flush.Features.ITM13.calcFormScore(form);
                 },
 
                 // arbitrary variable storage
@@ -224,12 +235,12 @@
         };
 
         // Init
-        window.addEventListener('beforeunload', Flush.Utils.pageUnloadListener);/*ITM20*/
+        window.addEventListener('beforeunload', Flush.Features.ITM20.pageUnloadListener);/*ITM20*/
         // ITM25: Spawn starting players
-        Flush.addPlayer();
-        Flush.addPlayer();
-        Flush.addPlayer();
-        Flush.addPlayer();
+        Flush.Features.ITM4.addPlayer();
+        Flush.Features.ITM4.addPlayer();
+        Flush.Features.ITM4.addPlayer();
+        Flush.Features.ITM4.addPlayer();
     </script>
 
     <noscript><!-- ITM30 -->
