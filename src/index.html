@@ -142,6 +142,10 @@
                 },
             },
 
+            handleFormEdit(form) {
+                Flush.calcFormScore(form);
+            },
+
             calcFormScore(form) {/*ITM13*/
                 let sum = 0;
                 Array.from(form.elements).forEach(e => {
@@ -192,12 +196,12 @@
                 let playerNum = ++Flush.Utils.var.playerNumber;
                 let htmlTemplate = `\
 <td><!-- ITM6 --><input form="ITM8-gains-collection-p${playerNum}" name="ITM6" value="Player${playerNum}" minlength="1"><!-- ITM24 --></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.calcFormScore(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
 <td><!-- ITM14 --><form id="ITM8-gains-collection-p${playerNum}"><!-- ITM13 --><output name="ITM13">0</output></form></td>`
 
                 let $rowNode = document.createElement("tr");
