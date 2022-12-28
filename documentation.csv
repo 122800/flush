@@ -302,6 +302,10 @@ ITM32|Concept: Local Datastore|"
 The serialized representation of all game data (ITM23)
 stored in `Window.localStorage` across sessions.
 
+This item may be split into parts
+or otherwise altered in the future
+to better fit organizational needs.
+
 Usage constraints:
 - Data persistence and retrieval is protocol-specific.
 - The behaviour is undefined for documents loaded from `file:` URLs.
