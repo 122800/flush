@@ -215,10 +215,8 @@ Closing the browser.
 Accidentally triggering [ITM31].
 
 Implementation:
-All game data (ITM23) is saved in `Window.localStorage`
-on modification.
-If present at startup,
-it is loaded into the playing area.
+All game data (ITM23) is saved as [ITM32] on modification.
+[ITM32] is loaded into the playing area on startup (ITM25) if present.
 A confirmation prompt is added to [ITM31].
 "|""
 ITM21|Known Issues|"
@@ -238,6 +236,7 @@ and must be protected from data loss or corruption.
 * Player names (ITM6)
 * Player gains (ITM8) for each round
 "|"
+Encompassed:ITM32
 Encompasses:ITM6
 Encompasses:ITM8
 "
@@ -286,6 +285,12 @@ Allows the user to quickly reset the game to its initial state (ITM25).
 Implementation:
 A 'clear data' button is made available.
 Resets all existing game data (ITM23).
-Clears the saved data from [ITM20].
+Clears [ITM32].
 Reapplies [ITM25].
 "|""
+ITM32|Concept: Local Datastore|"
+The serialized representation of all game data (ITM23)
+stored in `Window.localStorage` across sessions.
+"|"
+Encompassed:ITM23
+"
