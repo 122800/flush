@@ -195,7 +195,7 @@
                 let $gameTable = Flush.$.game.children[0];// game > tbody
                 let playerNum = ++Flush.Utils.var.playerNumber;
                 let htmlTemplate = `\
-<td><!-- ITM6 --><input form="ITM8-gains-collection-p${playerNum}" name="ITM6" value="Player${playerNum}" minlength="1"><!-- ITM24 --></td>
+<td><!-- ITM6 --><input form="ITM8-gains-collection-p${playerNum}" name="ITM6" minlength="1" value="Player${playerNum}"><!-- ITM24 --></td>
 <td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
 <td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
 <td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)"></td>
