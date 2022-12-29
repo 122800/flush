@@ -221,17 +221,17 @@
                 // init default values
                 if(!playerDTO) playerDTO = {
                     ITM6: "Player" + playerNum,
-                    ITM8: [],
+                    ITM8: Array(6).fill(""),
                 };
 
                 let htmlTemplate = `\
 <td><!-- ITM6 --><input form="ITM8-gains-collection-p${playerNum}" name="ITM6" minlength="1" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM6}"><!-- ITM24 --></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM8[0] || ""}"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM8[1] || ""}"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM8[2] || ""}"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM8[3] || ""}"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM8[4] || ""}"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM8[5] || ""}"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM8[0]}"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM8[1]}"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM8[2]}"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM8[3]}"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM8[4]}"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.handleFormEdit(this.form)" value="${playerDTO.ITM8[5]}"></td>
 <td><!-- ITM14 --><form id="ITM8-gains-collection-p${playerNum}"><!-- ITM13 --><output name="ITM13">0</output></form></td>`
 
                 let $rowNode = document.createElement("tr");
