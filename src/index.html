@@ -144,17 +144,24 @@
 
             Features: {
                 ITM4: {
-                    addPlayer() {
+                    addPlayer(playerDTO) {
                         let $gameTable = Flush.$.game.children[0];// game > tbody
                         let playerNum = ++Flush.Utils.var.playerNumber;
+
+                        // init default values
+                        if(!playerDTO) playerDTO = {
+                            ITM6: "Player" + playerNum,
+                            ITM8: Array(6).fill(""),
+                        };
+
                         let htmlTemplate = `\
-<td><!-- ITM6 --><input form="ITM8-gains-collection-p${playerNum}" name="ITM6" minlength="1" value="Player${playerNum}"><!-- ITM24 --></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)"></td>
-<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)"></td>
+<td><!-- ITM6 --><input form="ITM8-gains-collection-p${playerNum}" name="ITM6" minlength="1" oninput="Flush.Utils.handleFormEdit(this.form)" value="${playerDTO.ITM6}"><!-- ITM24 --></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)" value="${playerDTO.ITM8[0]}"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)" value="${playerDTO.ITM8[1]}"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)" value="${playerDTO.ITM8[2]}"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)" value="${playerDTO.ITM8[3]}"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)" value="${playerDTO.ITM8[4]}"></td>
+<td><!-- ITM8 --><input form="ITM8-gains-collection-p${playerNum}" type="number" min="0" step="5" max="999" oninput="Flush.Utils.handleFormEdit(this.form)" value="${playerDTO.ITM8[5]}"></td>
 <td><!-- ITM14 --><form id="ITM8-gains-collection-p${playerNum}"><!-- ITM13 --><output name="ITM13">0</output></form></td>`
 
                         let $rowNode = document.createElement("tr");
@@ -213,10 +220,45 @@
                 },
 
                 ITM20: {
-                    pageUnloadListener(event) {
-                      event.preventDefault();
-                      // this message is not guaranteed to appear in every browser
-                      return event.returnValue = 'Er du sikker? Dataen din vil ikke lagres.';
+                    persistGameData(form) {
+                        let $forms = Flush.$.dynamic.forms();
+
+                        // generate a data object from each Form element
+                        let playerDataDTO = Array.from($forms).map(f => {
+                            let playerDTO = {};
+                            playerDTO.ITM6 = f.elements.ITM6.value;
+                            playerDTO.ITM8 = [];
+                            Array.from(f.elements).forEach(e => {
+                                if(e.type != "number") return;
+                                playerDTO.ITM8.push(e.value);
+                            });
+                            return playerDTO;
+                        });
+
+                        // stringify
+                        let playerDataJSON = JSON.stringify(playerDataDTO);
+
+                        // persist
+                        Flush.Utils.ITM20.LocalStorage.setItem(Flush.Constants.ITM32_PLAYER_DATA, playerDataJSON);
+                    },
+
+                    loadSavedGame() {
+                        let playerDataJSON = Flush.Utils.ITM20.LocalStorage.getItem(Flush.Constants.ITM32_PLAYER_DATA);
+                        let playerDataDTO = JSON.parse(playerDataJSON);
+
+                        // NOTE: If the data model changes in the future, version detection will have to be added here
+
+                        playerDataDTO.forEach(playerDTO => {
+                            Flush.Features.ITM4.addPlayer(playerDTO);
+                        });
+
+                        // update ITM13 immediately
+                        let $forms = Flush.$.dynamic.forms();
+                        $forms.forEach(f => Flush.Features.ITM13.calcFormScore(f));
+                    },
+
+                    savedGameExists() {
+                        return Flush.Utils.ITM20.LocalStorage.getItem(Flush.Constants.ITM32_PLAYER_DATA) != null;
                     },
                 },
 
@@ -235,20 +277,41 @@
 
                 handleFormEdit(form) {
                     Flush.Features.ITM13.calcFormScore(form);
+                    Flush.Features.ITM20.persistGameData();
                 },
+
+                initializeGame() {
+                    if(Flush.Features.ITM20.savedGameExists()) {
+                        Flush.Features.ITM20.loadSavedGame();
+                    } else {
+                        Flush.Features.ITM25.applyInitialGameConfigs();
+                    }
+                },
+
+                ITM20: {
+                    LocalStorage: {
+                        getItem(key) {
+                            return localStorage.getItem(key);
+                        },
+                        setItem(key, value) {
+                            return localStorage.setItem(key, value);
+                        },
+                    },
+                },
+
 
                 // arbitrary variable storage
                 var: {
                     playerNumber: 0,
                 },
             },
+
+            Constants: {
+                ITM32_PLAYER_DATA: "PLAYER_DATA",
+            },
         };
 
-        // Init
-        window.addEventListener('beforeunload', Flush.Features.ITM20.pageUnloadListener);/*ITM20*/
-
-        // ITM25
-        Flush.Features.ITM25.applyInitialGameConfigs();
+        Flush.Utils.initializeGame();
     </script>
 
     <noscript><!-- ITM30 -->

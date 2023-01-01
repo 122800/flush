@@ -125,6 +125,12 @@ with one 'form' element per player,
 and we'll see how it goes.
 
 And actually you can use the HTML 'output' element for this!
+
+# Data Model
+
+No proper JS data model is currently maintained,
+game data (ITM23) is stored in HTML
+and extracted into JS as needed for manipulation.
 "|""
 ITM10|Methodology|"
 Specific design choices and principles are outlined here in 'Methodology'.
@@ -143,7 +149,6 @@ ITM11|Feature: View Program Meta-data|"
 "|""
 ITM12|To-do List|"
 P1
-* Prevent accidental data-loss even on browser closed (rework of ITM20)
 * [ITM5] Remove a player from the game
 P3
 * Allow filling in from average of others
@@ -151,8 +156,6 @@ P3
 * Ranking operation (ITM18) should be aware of invalidated rank
   when points change
   (let go of 'sorted' indication?)
-* Improve page-reload warning (ITM20) behaviour
-  when there are no unsaved changes
 * Control & sanitize user input
 P4
 * Configure relevant HTML 'meta' tags
@@ -218,6 +221,13 @@ to avoid accidentally losing the game data (ITM23).
 Managed risk situations:
 Reloading the page.
 Closing the tab.
+Closing the browser.
+
+Some usage constraints are identified in [ITM32].
+
+Implementation:
+All game data (ITM23) is saved as [ITM32] on modification.
+[ITM32] is loaded into the playing area on startup (ITM25) if present.
 "|""
 ITM21|Known Issues|"
 * [ITM22] BFCache Incompatibility
@@ -236,6 +246,7 @@ and must be protected from data loss or corruption.
 * Player names (ITM6)
 * Player gains (ITM8) for each round
 "|"
+Encompassed:ITM32
 Encompasses:ITM6
 Encompasses:ITM8
 "
@@ -245,6 +256,8 @@ ITM24|Feature: Edit Player Name|"
 ITM25|Feature: Initial Game Configuration|"
 An initial set of game configurations are applied automatically on loading,
 for convenience.
+This feature is not applied if saved data is found in [ITM32].
+
 Configurations:
 * A set of 4 (unnamed) players
 "|""
@@ -279,3 +292,30 @@ a warning is displayed to clarify the situation.
 The following situations are handled:
 * Absence of JavaScript
 "|""
+ITM32|Concept: Local Datastore|"
+The serialized representation of all game data (ITM23)
+stored in `Window.localStorage` across sessions.
+
+This item may be split into parts
+or otherwise altered in the future
+to better fit organizational needs.
+
+Usage constraints:
+- Data persistence and retrieval is protocol-specific.
+- The behaviour is undefined for documents loaded from `file:` URLs.
+
+Implementation:
+`localStorage` keys:
+- `PLAYER_DATA`: Contains ITM6, ITM8.
+  Data model:
+  ```
+  [
+    {
+      "ITM6": "Player1",
+      "ITM8": ["5", "10", "", "", "", ""]
+    }
+  ]
+  ```
+"|"
+Encompassed:ITM23
+"
