@@ -50,7 +50,10 @@ ITM4|Feature: Add Player|"
 Details:
 * A means of adding a new player is visible.
 A neutral and plausibly unique name is assigned by default.
-"|""
+"|"
+Consumes:ITM6
+Consumes:ITM8
+"
 ITM5|Feature: Remove Player|"
 Details:
 * A means of deleting a player is visible.
@@ -61,6 +64,7 @@ Textual.
 Trimmed.
 At least 1 character.
 "|"
+Consumed:ITM4
 Consumed:ITM18
 Encompassed:ITM23
 "
@@ -73,6 +77,7 @@ Non-negative integer.
 Multiples of '5' only.
 Initialized to blank '' to indicate no data.
 "|"
+Consumed:ITM4
 Consumed:ITM18
 Encompassed:ITM13
 Encompassed:ITM23
