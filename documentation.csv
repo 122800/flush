@@ -320,6 +320,15 @@ Implementation:
 "|"
 Encompassed:ITM23
 "
-ITM33|Feature: Game data export|"
-
+ITM33|Feature: Game Result Export|"
+The user may export certain data-points (ITM34) from the game to a text format.
+This action is available on-demand at any time.
+The export text is copied into the clipboard.
+The user is notified of the clipboard action.
+"|""
+ITM34|Feature: Game Result Export|"
+The user may export certain data-points (ITM34) from the game to a text format.
+This action is available on-demand at any time.
+The export text is copied into the clipboard.
+The user is notified of the clipboard action.
 "|""
