@@ -328,7 +328,7 @@ The user may export certain data-points (ITM34) from the game
 to a text format.
 This action is available on-demand at any time.
 The export text is copied into the clipboard.
-The user is notified of the clipboard action.
+The user is informed of the clipboard action.
 "|""
 ITM34|Concept: Game Result Export Data-Points|"
 A subset of game data (ITM23) as well as some other elements.
