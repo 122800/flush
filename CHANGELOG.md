@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning]
 
 ### Fixed
 
-- A more comfortably display size across devices
+- A more comfortable display size across devices
 - Other minor visual improvements
 
 ## [1.0.0] - 2022-07-13

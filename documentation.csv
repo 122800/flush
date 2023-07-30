@@ -28,6 +28,7 @@ The user can…
 * [ITM20] : Be safeguarded against accidental loss of game data (ITM23)
 * [ITM11] : View additional meta-data relative to the program
 * [ITM30] : See a warning in case of incompatibility with the device
+* [ITM33] : Export the game data in a text format
 
 Tentative features:
 
@@ -210,7 +211,7 @@ ITM19|Link: Consume|"
 An item consumes or is consumed.
 An item processes the contents of another.
 Datatype constraints from the consumed item
-are transferred / must be handled by the consuming one.
+are transferred to / must be handled by the consuming one.
 Updates to the consumed item
 may need to be reflected in the consuming one.
 "|""
@@ -319,3 +320,6 @@ Implementation:
 "|"
 Encompassed:ITM23
 "
+ITM33|Feature: Game data export|"
+
+"|""
