@@ -67,6 +67,7 @@ At least 1 character.
 "|"
 Consumed:ITM4
 Consumed:ITM18
+Consumed:ITM34
 Encompassed:ITM23
 "
 ITM7|Feature: Inscribing Gains per Round|"
@@ -175,6 +176,7 @@ ITM14|Concept: Player Score|"
 The sum of all of a player's gains (ITM8).
 "|"
 Consumed:ITM18
+Consumed:ITM34
 "
 ITM15|Concept(Technical): Dynamic Refresh|"
 Code logic triggered by an event.
@@ -248,6 +250,7 @@ and must be protected from data loss or corruption.
 * Player gains (ITM8) for each round
 "|"
 Encompassed:ITM32
+Encompassed:ITM34
 Encompasses:ITM6
 Encompasses:ITM8
 "
@@ -321,14 +324,28 @@ Implementation:
 Encompasses:ITM23
 "
 ITM33|Feature: Game Result Export|"
-The user may export certain data-points (ITM34) from the game to a text format.
+The user may export certain data-points (ITM34) from the game
+to a text format.
 This action is available on-demand at any time.
 The export text is copied into the clipboard.
 The user is notified of the clipboard action.
 "|""
-ITM34|Feature: Game Result Export|"
-The user may export certain data-points (ITM34) from the game to a text format.
-This action is available on-demand at any time.
-The export text is copied into the clipboard.
-The user is notified of the clipboard action.
-"|""
+ITM34|Concept: Game Result Export Data-Points|"
+A subset of game data (ITM23) as well as some other elements.
+From [ITM23]:
+* Player names (ITM6)
+Other elements:
+* Player score (ITM14)
+* Current timestamp (ITM35)
+"|"
+Consumes:ITM6
+Consumes:ITM35
+Encompasses:ITM23
+"
+ITM35|Concept: Current Timestamp|"
+The current date and time in UTC+0,
+generated dynamically on demand.
+Format: yyyy-MM-ddTHH:mm+00:00
+"|"
+Consumed:ITM34
+"
