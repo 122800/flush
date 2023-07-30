@@ -318,7 +318,7 @@ Implementation:
   ]
   ```
 "|"
-Encompassed:ITM23
+Encompasses:ITM23
 "
 ITM33|Feature: Game Result Export|"
 The user may export certain data-points (ITM34) from the game to a text format.
